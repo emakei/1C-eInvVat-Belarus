@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.w3schools.com" xmlns="http://www.w3schools.com" elementFormDefault="qualified">
+
+    <xs:element name="issuance">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="general" type="general"/>
+                <xs:element name="provider" type="provider"/>
+                <xs:element name="recipient" type="recipient"/>
+                <xs:element name="senderReceiver" type="senderReceiver"/>
+                <xs:element name="deliveryCondition" type="deliveryCondition"/>
+                <xs:element name="roster" type="rosterList"/>
+            </xs:sequence>
+            <xs:attribute name="sender" use="required" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="general">
+        <xs:annotation>
+            <xs:documentation>Общий раздел</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="number" type="invoiceFormat"/>
+            <xs:element name="dateIssuance" type="xs:date" minOccurs="0"/>
+            <xs:element name="dateTransaction" type="xs:date"/>
+            <xs:element name="documentType" type="invoiceDocType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="provider">
+        <xs:annotation>
+            <xs:documentation>Реквизиты поставщика</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="providerStatus" type="providerStatusType" default="SELLER"/>
+            <xs:element name="dependentPerson" type="xs:boolean" default="false"/>
+            <xs:element name="residentsOfOffshore" type="xs:boolean" default="false"/>
+            <xs:element name="specialDealGoods" type="xs:boolean" default="false"/>
+            <xs:element name="bigCompany" type="xs:boolean" default="false"/>
+            <xs:element name="countryCode" type="xs:integer" minOccurs="0"/>
+            <xs:element name="unp" type="xs:string" minOccurs="0"/>
+            <xs:element name="branchCode" type="xs:string" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+            <xs:element name="address" type="xs:string" minOccurs="0"/>
+            <xs:element name="principal" type="forInvoiceType" minOccurs="0"/>
+            <xs:element name="vendor" type="forInvoiceType" minOccurs="0"/>
+            <xs:element name="declaration" type="xs:string" minOccurs="0"/>
+            <xs:element name="dateRelease" type="xs:date" minOccurs="0"/>
+            <xs:element name="dateActualExport" type="xs:date" minOccurs="0"/>
+            <xs:element name="taxes" type="taxesType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="recipient">
+        <xs:annotation>
+            <xs:documentation>Реквизиты получателя</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="recipientStatus" type="recipientStatusType" default="CUSTOMER"/>
+            <xs:element name="dependentPerson" type="xs:boolean" default="false"/>
+            <xs:element name="residentsOfOffshore" type="xs:boolean" default="false"/>
+            <xs:element name="specialDealGoods" type="xs:boolean" default="false"/>
+            <xs:element name="bigCompany" type="xs:boolean" default="false"/>
+            <xs:element name="countryCode" type="xs:integer" minOccurs="0"/>
+            <xs:element name="unp" type="xs:string" minOccurs="0"/>
+            <xs:element name="branchCode" type="xs:string" minOccurs="0"/>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+            <xs:element name="address" type="xs:string" minOccurs="0"/>
+            <xs:element name="declaration" type="xs:string" minOccurs="0"/>
+            <xs:element name="taxes" type="taxesType" minOccurs="0"/>
+            <xs:element name="dateImport" type="xs:date" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="senderReceiver">
+        <xs:annotation>
+            <xs:documentation>Реквизиты грузопоотправителя и грузополучателя</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="consignors" type="consignorList" minOccurs="0"/>
+            <xs:element name="consignees" type="consigneeList" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="consignorList">
+        <xs:annotation>
+            <xs:documentation>Список грузоотправителей </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="consignor" type="consignor" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="consignor">
+        <xs:annotation>
+            <xs:documentation>Грузоотправитель</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="countryCode" type="xs:integer" minOccurs="0"/>
+            <xs:element name="unp" type="xs:string"/>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+            <xs:element name="address" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="consigneeList">
+        <xs:annotation>
+            <xs:documentation>Список грузополучателей </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="consignee" type="consignee" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="consignee">
+        <xs:annotation>
+            <xs:documentation>Грузополучатель</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="countryCode" type="xs:integer" minOccurs="0"/>
+            <xs:element name="unp" type="xs:string"/>
+            <xs:element name="name" type="xs:string" minOccurs="0"/>
+            <xs:element name="address" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="deliveryCondition">
+        <xs:annotation>
+            <xs:documentation>Условия поставки</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="contract" type="contract" minOccurs="0"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="contract">
+        <xs:annotation>
+            <xs:documentation>Договор (контракт) на поставку товаров (выполнения работ, оказания услуг), передачу имущественных прав </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="number" type="xs:string" minOccurs="0"/>
+            <xs:element name="date" type="xs:date" minOccurs="0"/>
+            <xs:element name="documents" type="documentList" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="documentList">
+        <xs:annotation>
+            <xs:documentation>Документы, подтверждающие поставку товаров (работ, услуг), передачу имущественных прав </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="document" type="document" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="document">
+        <xs:sequence>
+            <xs:element name="docType" type="docType"/>
+            <xs:element name="date" type="xs:date"/>
+            <xs:element name="blankCode" type="xs:string" minOccurs="0"/>
+            <xs:element name="seria" type="xs:string" minOccurs="0"/>
+            <xs:element name="number" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="docType">
+        <xs:sequence>
+            <xs:element name="code" type="xs:integer"/>
+            <xs:element name="value" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="rosterList">
+        <xs:annotation>
+            <xs:documentation>Данные по товарам (работам, услугам), имущественным правам</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="rosterItem" type="rosterItem" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="totalCostVat" use="required" type="xs:decimal"/>
+        <xs:attribute name="totalExcise" use="required" type="xs:decimal"/>
+        <xs:attribute name="totalVat" use="required" type="xs:decimal"/>
+        <xs:attribute name="totalCost" use="required" type="xs:decimal"/>
+    </xs:complexType>
+
+    <xs:complexType name="rosterItem">
+        <xs:sequence>
+            <xs:element name="number" type="xs:integer" minOccurs="0"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="code" type="xs:string" minOccurs="0"/>
+            <xs:element name="code_oced" type="xs:integer" minOccurs="0"/>
+            <xs:element name="units" type="xs:integer" minOccurs="0"/>
+            <xs:element name="count" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="price" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="cost" type="xs:decimal"/>
+            <xs:element name="summaExcise" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="vat" type="vat"/>
+            <xs:element name="costVat" type="xs:decimal"/>
+            <xs:element name="descriptions" type="descriptionList" minOccurs="0"/>
+            <xs:element name="skipDeduction" type="xs:date" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="descriptionList">
+        <xs:annotation>
+            <xs:documentation>Дополнительные сведения </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="description" type="descriptionType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="vat">
+        <xs:annotation>
+            <xs:documentation>НДС</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="rate" type="xs:decimal"/>
+            <xs:element name="rateType" type="rateType"/>
+            <xs:element name="summaVat" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="forInvoiceType">
+        <xs:sequence>
+            <xs:element name="number" type="invoiceFormat"/>
+            <xs:element name="date" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="taxesType">
+        <xs:sequence>
+            <xs:element name="number" type="xs:string"/>
+            <xs:element name="date" type="xs:date"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="invoiceFormat">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{9}\-\d{4}\-\d{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="rateType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DECIMAL"/>
+            <xs:enumeration value="ZERO"/>
+            <xs:enumeration value="NO_VAT"/>
+            <xs:enumeration value="CALCULATED"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="invoiceDocType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ORIGINAL"/>
+            <xs:enumeration value="ADDITIONAL"/>
+            <xs:enumeration value="FIXED"/>
+            <xs:enumeration value="ADD_NO_REFERENCE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="providerStatusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SELLER"/>
+            <xs:enumeration value="CONSIGNOR"/>
+            <xs:enumeration value="COMMISSIONAIRE"/>
+            <xs:enumeration value="TAX_DEDUCTION_PAYER"/>
+            <xs:enumeration value="TRUSTEE"/>
+            <xs:enumeration value="FOREIGN_ORGANIZATION"/>
+            <xs:enumeration value="AGENT"/>
+            <xs:enumeration value="DEVELOPER"/>
+            <xs:enumeration value="TURNOVERS_ON_SALE_PAYER"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="recipientStatusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="CUSTOMER"/>
+            <xs:enumeration value="CONSUMER"/>
+            <xs:enumeration value="CONSIGNOR"/>
+            <xs:enumeration value="COMMISSIONAIRE"/>
+            <xs:enumeration value="TAX_DEDUCTION_RECIPIENT"/>
+            <xs:enumeration value="FOREIGN_ORGANIZATION_BUYER"/>
+            <xs:enumeration value="TURNOVERS_ON_SALE_RECIPIENT"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="descriptionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="DEDUCTION_IN_FULL"/>
+            <xs:enumeration value="VAT_EXEMPTION"/>
+            <xs:enumeration value="OUTSIDE_RB"/>
+            <xs:enumeration value="IMPORT_VAT"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
