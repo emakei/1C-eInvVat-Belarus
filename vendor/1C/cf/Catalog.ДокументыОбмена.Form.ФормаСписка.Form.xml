@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаНастройкаСписка" id="46">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.ListSettings</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаНастройкаСпискаРасширеннаяПодсказка" id="47"/>
+			</Button>
+			<Button name="ФормаСохранитьЗначения" id="50">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.SaveValues</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаСохранитьЗначенияРасширеннаяПодсказка" id="51"/>
+			</Button>
+			<Button name="ФормаВосстановитьЗначения" id="52">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.RestoreValues</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаВосстановитьЗначенияРасширеннаяПодсказка" id="53"/>
+			</Button>
+			<Button name="ФормаОбновить" id="56">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Refresh</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="57"/>
+			</Button>
+			<Popup name="ФормаГруппаПодменюВыгрузить" id="58">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выгрузить</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаГруппаПодменюВыгрузитьРасширеннаяПодсказка" id="59"/>
+				<ChildItems>
+					<Button name="ФормаВыгрузитьОтмеченные" id="44">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВыгрузитьОтмеченные</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ФормаВыгрузитьОтмеченныеРасширеннаяПодсказка" id="45"/>
+					</Button>
+					<Button name="ФормаВыгрузитьОтмеченныеВХранилище" id="60">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВыгрузитьОтмеченныеВХранилище</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ФормаВыгрузитьОтмеченныеВХранилищеРасширеннаяПодсказка" id="61"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2">
+				<ChildItems>
+					<Button name="СписокКонтекстноеМенюВыгрузитьОтмеченные" id="54">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВыгрузитьОтмеченные</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="СписокКонтекстноеМенюВыгрузитьОтмеченныеРасширеннаяПодсказка" id="55"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="11">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Код" id="17">
+					<DataPath>Список.Code</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер документа</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КодКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<LabelField name="Год" id="35">
+					<DataPath>Список.Год</DataPath>
+					<ContextMenu name="ГодКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ГодРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<LabelField name="УНП" id="41">
+					<DataPath>Список.УНП</DataPath>
+					<ContextMenu name="УНПКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="УНПРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<LabelField name="Номер" id="38">
+					<DataPath>Список.Номер</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="Наименование" id="14">
+					<DataPath>Список.Description</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<LabelField name="ДатаСостояния" id="20">
+					<DataPath>Список.ДатаСостояния</DataPath>
+					<ContextMenu name="ДатаСостоянияКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДатаСостоянияРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<LabelField name="Статус" id="23">
+					<DataPath>Список.Статус</DataPath>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<LabelField name="КоличествоПодписей" id="26">
+					<DataPath>Список.КоличествоПодписей</DataPath>
+					<ContextMenu name="КоличествоПодписейКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="КоличествоПодписейРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="КоличествоВерныхПодписей" id="29">
+					<DataPath>Список.КоличествоВерныхПодписей</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>из них верных</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КоличествоВерныхПодписейКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="КоличествоВерныхПодписейРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<LabelField name="РасположениеФайла" id="32">
+					<DataPath>Список.РасположениеФайла</DataPath>
+					<ContextMenu name="РасположениеФайлаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="РасположениеФайлаРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникДокументыОбмена.Ссылка,
+	СправочникДокументыОбмена.ПометкаУдаления,
+	СправочникДокументыОбмена.Предопределенный,
+	СправочникДокументыОбмена.Код,
+	СправочникДокументыОбмена.Наименование,
+	СправочникДокументыОбмена.ДатаСостояния,
+	СправочникДокументыОбмена.Статус,
+	СправочникДокументыОбмена.ХранилищеЗначения,
+	СправочникДокументыОбмена.КоличествоПодписей,
+	СправочникДокументыОбмена.КоличествоВерныхПодписей,
+	СправочникДокументыОбмена.ТекстОшибкиПроверкиПодписей,
+	СправочникДокументыОбмена.ИмяФайлаДокумента,
+	ВЫБОР
+		КОГДА СправочникДокументыОбмена.РасположениеФайла = 0
+			ТОГДА "Не указано"
+		КОГДА СправочникДокументыОбмена.РасположениеФайла = 1
+			ТОГДА "В базе"
+		КОГДА СправочникДокументыОбмена.РасположениеФайла = 2
+			ТОГДА "Во внешнем файле"
+		КОГДА СправочникДокументыОбмена.РасположениеФайла = 3
+			ТОГДА "Перенесён в архив"
+	КОНЕЦ КАК РасположениеФайла,
+	СправочникДокументыОбмена.contentType,
+	СправочникДокументыОбмена.contentEncoding,
+	ПОДСТРОКА(СправочникДокументыОбмена.Код, 1, 9) КАК УНП,
+	ПОДСТРОКА(СправочникДокументыОбмена.Код, 11, 4) КАК Год,
+	ПОДСТРОКА(СправочникДокументыОбмена.Код, 16, 10) КАК Номер
+ИЗ
+	Справочник.ДокументыОбмена КАК СправочникДокументыОбмена</QueryText>
+				<MainTable>Catalog.ДокументыОбмена</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыгрузитьОтмеченные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В каталог</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить отмеченные в файлы на диске</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьОтмеченные</Action>
+		</Command>
+		<Command name="ВыгрузитьОтмеченныеВХранилище" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В хранилище</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить отмеченные в хранилище</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьОтмеченныеВХранилище</Action>
+		</Command>
+	</Commands>
+</Form>

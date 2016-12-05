@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Subsystem uuid="3047f9d1-a587-465a-af38-ef00b3c04e15">
+		<Properties>
+			<Name>ЭСчФпоНДС</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ЭСчФ по НДС</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ОбменДанными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСЧФсервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСЧФклиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСЧФобщий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСЧФсерверПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСЧФклиентПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ЭСЧФОбработкаДанныхДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеКонтактнойИнформацией</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.XSD</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.WSurl</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ПутьКаталогаХраненияВходящихДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.СохранениеДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.РасположениеВходящихФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.РежимРаботыПоУмолчаниюЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИспользованиеЭСЧФПолный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПодписаниеИОбменЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаНастроекЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаЭСЧФобычная</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.ФормаЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.КвитанцияЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">c8704deb-b974-426f-be03-cc1a79e4a706</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">98908753-13c7-4d98-8ffb-3ab5ad90003b</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">2107b9db-f0a6-4262-bafe-da397c3744f9</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">8b6598c2-c1e7-405a-ae62-43c4bdfd8437</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ccbbe00d-a797-4c93-b984-7fad4e899d4c</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИмяМодуляКриптографии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.АдресПроксиСервераЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПутьКаталогаХраненияВходящихДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.WSurl</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПутьКаталогаXSD</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РасположениеВходящихФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПутьМодуляКриптографии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.РежимРаботыПоУмолчаниюЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ТипМодуляКриптографии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СохранениеДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПортПроксиСервераЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИмяПользователяПроксиСервераЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПарольПользователяПроксиСервераЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ТипПроксиСервераЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ИспользоватьПроксиСерверЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КлассификаторТНВЭДТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СертификатыКриптографии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КлассификаторОКЭД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТипыБСО</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БланкиДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ДокументыОбмена</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронныйСчетФактураВыданный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронныйСчетФактураПолученный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПакетИсходящихЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.ДокументыПоЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыСтавокНДСЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыПоставщикаЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыПолучателяЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыОперацийЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СостояниеАвтоОбменаДаннымиСИМНС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДанныеПоКонтрагентамЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОбменСПорталомИМНС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.АвтоматическийОбменЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Взаимозависимые</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПереченьКрупныхПлательщиков</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Квитанции</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НомераЭСЧФ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПараметрыАвторизацииНаСервере</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ВыставленныеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КвитанцииВходящих</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ВыставленныеДокументыВходящие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НомераДляЗагрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НомераДляВыгрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СтатусыДляЗагрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СтатусыДляЗагрузкиВходящие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ГраницыНомеровВходящие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НомераДляПодтверждения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ВходящийНДСпоЭСЧФ</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

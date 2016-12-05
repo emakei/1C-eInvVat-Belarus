@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems">
+	<Item id="46e6593d-e83c-4835-ba35-b26fe2fb7c25">
+		<Name>CMR</Name>
+		<Code>607</Code>
+		<Description>CMR-накладная</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="590f4e96-2939-427c-84e5-d653862835d6">
+		<Name>Invoice</Name>
+		<Code>609</Code>
+		<Description>Invoice (счет)</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e5103fb8-d8e4-4d25-b9cf-99ed6502a621">
+		<Name>Авизо</Name>
+		<Code>610</Code>
+		<Description>Авизо</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="65acb5aa-5094-40bd-99d1-ab4c94362a80">
+		<Name>Акт</Name>
+		<Code>606</Code>
+		<Description>Акт</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c38cda5f-27b5-4ecf-b738-ace652fbdd2b">
+		<Name>АктВыполненныхРабот</Name>
+		<Code>612</Code>
+		<Description>Акт выполненных работ</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="830ed727-3908-4847-9e85-c9eeb77f3d42">
+		<Name>БухгалрерскаяСправка</Name>
+		<Code>611</Code>
+		<Description>Бухгалрерская справка</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="10d65f9e-7079-4271-af18-6a045d413d37">
+		<Name>Договор</Name>
+		<Code>604</Code>
+		<Description>Договор</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="afff7311-3bcb-4732-a542-6856032abfe8">
+		<Name>Другое</Name>
+		<Code>601</Code>
+		<Description>Другое</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="56426144-5dbf-4539-8be6-d3492fa6db9b">
+		<Name>Коносамент</Name>
+		<Code>613</Code>
+		<Description>Коносамент</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="64a698b6-79aa-4d11-a549-9fc103523bf8">
+		<Name>Контракт</Name>
+		<Code>605</Code>
+		<Description>Контракт</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a4d01197-1648-4c5d-b6d2-688eb577f3ac">
+		<Name>СчетФактура</Name>
+		<Code>608</Code>
+		<Description>Счет-фактура</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9059ad6d-0472-4f32-b704-d84f6e899f1d">
+		<Name>ТН2</Name>
+		<Code>602</Code>
+		<Description>ТН-2</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="490b8abc-af8b-46b0-b037-9693c422f910">
+		<Name>ТТН1</Name>
+		<Code>603</Code>
+		<Description>ТТН-1</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="99661a02-4bb1-4ec6-83ac-cc91e087b140">
+		<Name>ЭлектроннаяТН2</Name>
+		<Code>615</Code>
+		<Description>Электронная ТН-2</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c27b3343-7e1e-454f-bbd0-7afd56b9145b">
+		<Name>ЭлектроннаяТТН1</Name>
+		<Code>614</Code>
+		<Description>Электронная ТТН-1</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

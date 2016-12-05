@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа3" id="26">
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<InputField name="Период" id="1">
+					<DataPath>Запись.Period</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<CheckBoxField name="Зависит" id="10">
+					<DataPath>Запись.Зависит</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗависитКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ЗависитРасширеннаяПодсказка" id="12"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="22">
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<InputField name="Объект1" id="4">
+					<DataPath>Запись.Объект1</DataPath>
+					<ContextMenu name="Объект1КонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="Объект1РасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Наименование1" id="16">
+					<DataPath>Запись.Наименование1</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="Наименование1КонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="Наименование1РасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="StartChoice">Наименование1НачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="24">
+			<Group>Horizontal</Group>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<InputField name="Объект2" id="7">
+					<DataPath>Запись.Объект2</DataPath>
+					<ContextMenu name="Объект2КонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="Объект2РасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Наименование2" id="19">
+					<DataPath>Запись.Наименование2</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="Наименование2КонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="Наименование2РасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="StartChoice">Наименование2НачалоВыбора</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Документ" id="13">
+			<DataPath>Запись.Документ</DataPath>
+			<ContextMenu name="ДокументКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="15"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.Взаимозависимые</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

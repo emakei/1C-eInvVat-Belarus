@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems">
+	<Item id="83e9b8eb-6e35-4dbd-8b62-053c892f23f4">
+		<Name>БЕЛАРУСЬ</Name>
+		<Code>112</Code>
+		<Description>Республика Беларусь</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="215d0c81-effa-4108-8ce4-d57185730a3b">
+		<Name>РОССИЯ</Name>
+		<Code>643</Code>
+		<Description>Российская Федерация</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

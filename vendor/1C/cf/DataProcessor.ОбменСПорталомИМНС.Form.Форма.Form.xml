@@ -1,0 +1,2008 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПриАвторизации" id="206">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Авторизация</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаПриАвторизацииРасширеннаяПодсказка" id="207"/>
+			</Button>
+			<Button name="ФормаПодключение" id="208">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Подключение</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаПодключениеРасширеннаяПодсказка" id="209"/>
+			</Button>
+			<Button name="ФормаАвторизацияИПодключение" id="379">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.АвторизацияИПодключение</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаАвторизацияИПодключениеРасширеннаяПодсказка" id="380"/>
+			</Button>
+			<Button name="ФормаЗавершениеАвторизации" id="213">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗавершениеАвторизации</CommandName>
+				<Parameter xsi:nil="true"/>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Завершить и отключиться</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаЗавершениеАвторизацииРасширеннаяПодсказка" id="214"/>
+			</Button>
+			<Button name="ФормаОткрытьНастройкиПодсистемы" id="271">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьНастройкиПодсистемы</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаОткрытьНастройкиПодсистемыРасширеннаяПодсказка" id="272"/>
+			</Button>
+			<Popup name="ФормаПодменюРежимРаботы" id="399">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Режим работы</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Где производить операции над документами</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаПодменюРежимРаботыРасширеннаяПодсказка" id="400"/>
+				<ChildItems>
+					<Button name="ФормаУстановитьРежимРаботыНаКлиенте" id="401">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьРежимРаботыНаКлиенте</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ФормаУстановитьРежимРаботыНаКлиентеРасширеннаяПодсказка" id="402"/>
+					</Button>
+					<Button name="ФормаУстановитьРежимРаботыНаСервере" id="403">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьРежимРаботыНаСервере</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ФормаУстановитьРежимРаботыНаСервереРасширеннаяПодсказка" id="404"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnReopen">ПриПовторномОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="РежимРаботыНаСервере" id="198">
+			<DataPath>Объект.РежимРаботыНаСервере</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Где производить операции над документами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>на стороне клиента</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>на стороне сервера</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="РежимРаботыНаСервереКонтекстноеМеню" id="199"/>
+			<ExtendedTooltip name="РежимРаботыНаСервереРасширеннаяПодсказка" id="200"/>
+			<Events>
+				<Event name="OnChange">РежимРаботыНаСервереПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<UsualGroup name="ГруппаРеквизиты" id="196">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>None</ToolTipRepresentation>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРеквизитыРасширеннаяПодсказка" id="197"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаНастройкаОтбора" id="275">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройка отбора</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаНастройкаОтбораРасширеннаяПодсказка" id="276"/>
+					<ChildItems>
+						<InputField name="Организация" id="1">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ClearButton>true</ClearButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<UsualGroup name="ГруппаПериод" id="225">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="226"/>
+							<ChildItems>
+								<InputField name="НачалоПериода" id="4">
+									<DataPath>Объект.НачалоПериода</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период с</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="НачалоПериодаРасширеннаяПодсказка" id="6"/>
+								</InputField>
+								<InputField name="ОкончаниеПериода" id="7">
+									<DataPath>Объект.ОкончаниеПериода</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОкончаниеПериодаКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ОкончаниеПериодаРасширеннаяПодсказка" id="9"/>
+								</InputField>
+								<Button name="ВыбратьПериод" id="296">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВыбратьПериод</CommandName>
+									<Parameter xsi:nil="true"/>
+									<ExtendedTooltip name="ВыбратьПериодРасширеннаяПодсказка" id="297"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаОтборДополнительный" id="261">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отбор дополнительный</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отбор дополнительный</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОтборДополнительныйРасширеннаяПодсказка" id="262"/>
+							<ChildItems>
+								<CheckBoxField name="ТолькоТребующиеЗагрузки" id="252">
+									<DataPath>Объект.ТолькоТребующиеЗагрузки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>только без статуса</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Только документы, по которым нет статуса или статус требует перезагрузки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТолькоТребующиеЗагрузкиКонтекстноеМеню" id="253"/>
+									<ExtendedTooltip name="ТолькоТребующиеЗагрузкиРасширеннаяПодсказка" id="254"/>
+								</CheckBoxField>
+								<CheckBoxField name="ТолькоВыставленные" id="255">
+									<DataPath>Объект.ТолькоВыставленные</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>только выставленные</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Только документы, по которым есть дата выставления</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТолькоВыставленныеКонтекстноеМеню" id="256"/>
+									<ExtendedTooltip name="ТолькоВыставленныеРасширеннаяПодсказка" id="257"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаРеквизитыЗагрузки" id="194">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки загрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа реквизиты левая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаРеквизитыЗагрузкиРасширеннаяПодсказка" id="195"/>
+					<ChildItems>
+						<CheckBoxField name="ОбменТовары" id="10">
+							<DataPath>Объект.ОбменТовары</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>загружать товары</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОбменТоварыКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ОбменТоварыРасширеннаяПодсказка" id="12"/>
+						</CheckBoxField>
+						<CheckBoxField name="ОбменДокументыПоставки" id="16">
+							<DataPath>Объект.ОбменДокументыПоставки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>загружать документы поставки</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОбменДокументыПоставкиКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ОбменДокументыПоставкиРасширеннаяПодсказка" id="18"/>
+						</CheckBoxField>
+						<CheckBoxField name="ОбменГрузоотправителиГрузополучатели" id="13">
+							<DataPath>Объект.ОбменГрузоотправителиГрузополучатели</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>загружать грузоотправителей/грузополучателей</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОбменГрузоотправителиГрузополучателиКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ОбменГрузоотправителиГрузополучателиРасширеннаяПодсказка" id="15"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастроекСохраненияДокументов" id="273">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сохранение документа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настроек сохранения документов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>None</ToolTipRepresentation>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаНастроекСохраненияДокументовРасширеннаяПодсказка" id="274"/>
+					<ChildItems>
+						<RadioButtonField name="СохранитьДокумент" id="263">
+							<DataPath>Объект.СохранитьДокумент</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сохр. эл. док-ы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Что делать с вх. электронными документами (xml)</v8:content>
+								</v8:item>
+							</ToolTip>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>не сохр.</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>значимые</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>все</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="СохранитьДокументКонтекстноеМеню" id="264"/>
+							<ExtendedTooltip name="СохранитьДокументРасширеннаяПодсказка" id="265"/>
+						</RadioButtonField>
+						<RadioButtonField name="РасположениеВходящихФайлов" id="268">
+							<DataPath>Объект.РасположениеВходящихФайлов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расположение xml</v8:content>
+								</v8:item>
+							</Title>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>в базе</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>в файле</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="РасположениеВходящихФайловКонтекстноеМеню" id="269"/>
+							<ExtendedTooltip name="РасположениеВходящихФайловРасширеннаяПодсказка" id="270"/>
+						</RadioButtonField>
+						<CheckBoxField name="ПерезаписыватьИмеющиеся" id="258">
+							<DataPath>Объект.ПерезаписыватьИмеющиеся</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>перезаписывать имеющиеся документы</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Требуется ли перезаписывать найденные в базе по ИД документы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПерезаписыватьИмеющиесяКонтекстноеМеню" id="259"/>
+							<ExtendedTooltip name="ПерезаписыватьИмеющиесяРасширеннаяПодсказка" id="260"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="20"/>
+			<Events>
+				<Event name="OnCurrentPageChange">СтраницыПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="ГруппаИсходящиеДокументы" id="21">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходящие документы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаИсходящиеДокументыРасширеннаяПодсказка" id="22"/>
+					<ChildItems>
+						<Table name="ИсходящиеДокументы" id="23">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ИсходящиеДокументы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИсходящиеДокументыКонтекстноеМеню" id="24">
+								<ChildItems>
+									<Button name="ИсходящиеДокументыКонтекстноеМенюОтметитьДляОбработкиИхсодящие" id="381">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОтметитьДляОбработкиИхсодящие</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ИсходящиеДокументыКонтекстноеМенюОтметитьДляОбработкиИхсодящиеРасширеннаяПодсказка" id="382"/>
+									</Button>
+									<Button name="ИсходящиеДокументыКонтекстноеМенюСнятьОтметкуОбработкиВходящиеДокументы" id="393">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьОтметкуОбработкиВходящиеДокументы</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ИсходящиеДокументыКонтекстноеМенюСнятьОтметкуОбработкиВходящиеДокументыРасширеннаяПодсказка" id="394"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ИсходящиеДокументыКоманднаяПанель" id="25">
+								<ChildItems>
+									<Button name="ИсходящиеДокументыПолучитьИсходящиеДокументыБезСтатуса" id="223">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПолучитьИсходящиеДокументыБезСтатуса</CommandName>
+										<Parameter xsi:nil="true"/>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить документы</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ИсходящиеДокументыПолучитьИсходящиеДокументыБезСтатусаРасширеннаяПодсказка" id="224"/>
+									</Button>
+									<Button name="ИсходящиеДокументыОбновитьСтатусыИсходящихДокументов" id="250">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОбновитьСтатусыИсходящихДокументов</CommandName>
+										<Parameter xsi:nil="true"/>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Обновить статусы</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ИсходящиеДокументыОбновитьСтатусыИсходящихДокументовРасширеннаяПодсказка" id="251"/>
+									</Button>
+									<Button name="ИсходящиеДокументыНайти" id="367">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ИсходящиеДокументы.StandardCommand.Find</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ИсходящиеДокументыНайтиРасширеннаяПодсказка" id="368"/>
+									</Button>
+									<Button name="ИсходящиеДокументыОтменитьПоиск" id="377">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ИсходящиеДокументы.StandardCommand.CancelSearch</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ИсходящиеДокументыОтменитьПоискРасширеннаяПодсказка" id="378"/>
+									</Button>
+									<Button name="ИсходящиеДокументыСортироватьСписокПоВозрастанию" id="363">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ИсходящиеДокументы.StandardCommand.SortListAsc</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ИсходящиеДокументыСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="364"/>
+									</Button>
+									<Button name="ИсходящиеДокументыСортироватьСписокПоУбыванию" id="365">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ИсходящиеДокументы.StandardCommand.SortListDesc</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ИсходящиеДокументыСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="366"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИсходящиеДокументыРасширеннаяПодсказка" id="26"/>
+							<SearchStringAddition name="ИсходящиеДокументыСтрокаПоиска" id="27">
+								<Source>
+									<lf:elementId>23</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ИсходящиеДокументыСтрокаПоискаКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="ИсходящиеДокументыСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИсходящиеДокументыСостояниеПросмотра" id="30">
+								<Source>
+									<lf:elementId>23</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ИсходящиеДокументыСостояниеПросмотраКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="ИсходящиеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИсходящиеДокументыУправлениеПоиском" id="33">
+								<Source>
+									<lf:elementId>23</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ИсходящиеДокументыУправлениеПоискомКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="ИсходящиеДокументыУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">ИсходящиеДокументыПриОкончанииРедактирования</Event>
+								<Event name="AfterDeleteRow">ИсходящиеДокументыПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ИсходящиеДокументыГруппаНомерСтроки" id="383">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа номер строки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа номер строки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ИсходящиеДокументыГруппаНомерСтрокиРасширеннаяПодсказка" id="384"/>
+									<ChildItems>
+										<LabelField name="ИсходящиеДокументыНомерСтроки" id="36">
+											<DataPath>Объект.ИсходящиеДокументы.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсходящиеДокументыНомерСтрокиКонтекстноеМеню" id="37"/>
+											<ExtendedTooltip name="ИсходящиеДокументыНомерСтрокиРасширеннаяПодсказка" id="38"/>
+										</LabelField>
+										<PictureField name="ИсходящиеДокументыОбрабатывать" id="385">
+											<DataPath>Объект.ИсходящиеДокументы.Обрабатывать</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Фл</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ValuesPicture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ИсходящиеДокументыОбрабатыватьКонтекстноеМеню" id="386"/>
+											<ExtendedTooltip name="ИсходящиеДокументыОбрабатыватьРасширеннаяПодсказка" id="387"/>
+										</PictureField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ИсходящиеДокументыГруппаДокумент" id="307">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа документ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа документ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ИсходящиеДокументыГруппаДокументРасширеннаяПодсказка" id="308"/>
+									<ChildItems>
+										<ColumnGroup name="ИсходящиеДокументыГруппаРеквизитыДокумента" id="323">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа реквизиты документа</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа реквизиты документа</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ИсходящиеДокументыГруппаРеквизитыДокументаРасширеннаяПодсказка" id="324"/>
+											<ChildItems>
+												<InputField name="ИсходящиеДокументыНомерЭСЧФ" id="51">
+													<DataPath>Объект.ИсходящиеДокументы.НомерЭСЧФ</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыНомерЭСЧФКонтекстноеМеню" id="52"/>
+													<ExtendedTooltip name="ИсходящиеДокументыНомерЭСЧФРасширеннаяПодсказка" id="53"/>
+												</InputField>
+												<InputField name="ИсходящиеДокументыДокумент" id="39">
+													<DataPath>Объект.ИсходящиеДокументы.Документ</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыДокументКонтекстноеМеню" id="40"/>
+													<ExtendedTooltip name="ИсходящиеДокументыДокументРасширеннаяПодсказка" id="41"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ИсходящиеДокументыГруппаРеквизитыДокумента2" id="329">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа реквизиты документа2</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа реквизиты документа2</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ИсходящиеДокументыГруппаРеквизитыДокумента2РасширеннаяПодсказка" id="330"/>
+											<ChildItems>
+												<InputField name="ИсходящиеДокументыВидОперации" id="341">
+													<DataPath>Объект.ИсходящиеДокументы.ВидОперации</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыВидОперацииКонтекстноеМеню" id="342"/>
+													<ExtendedTooltip name="ИсходящиеДокументыВидОперацииРасширеннаяПодсказка" id="343"/>
+												</InputField>
+												<InputField name="ИсходящиеДокументыТип" id="54">
+													<DataPath>Объект.ИсходящиеДокументы.Тип</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыТипКонтекстноеМеню" id="55"/>
+													<ExtendedTooltip name="ИсходящиеДокументыТипРасширеннаяПодсказка" id="56"/>
+												</InputField>
+												<InputField name="ИсходящиеДокументыДатаСовершенияОперации" id="57">
+													<DataPath>Объект.ИсходящиеДокументы.ДатаСовершенияОперации</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыДатаСовершенияОперацииКонтекстноеМеню" id="58"/>
+													<ExtendedTooltip name="ИсходящиеДокументыДатаСовершенияОперацииРасширеннаяПодсказка" id="59"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ИсходящиеДокументыГруппаКонтрагент" id="315">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа контрагент</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа контрагент</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ИсходящиеДокументыГруппаКонтрагентРасширеннаяПодсказка" id="316"/>
+									<ChildItems>
+										<InputField name="ИсходящиеДокументыКонтрагент" id="81">
+											<DataPath>Объект.ИсходящиеДокументы.Контрагент</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсходящиеДокументыКонтрагентКонтекстноеМеню" id="82"/>
+											<ExtendedTooltip name="ИсходящиеДокументыКонтрагентРасширеннаяПодсказка" id="83"/>
+										</InputField>
+										<InputField name="ИсходящиеДокументыДоговорКонтрагента" id="84">
+											<DataPath>Объект.ИсходящиеДокументы.ДоговорКонтрагента</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсходящиеДокументыДоговорКонтрагентаКонтекстноеМеню" id="85"/>
+											<ExtendedTooltip name="ИсходящиеДокументыДоговорКонтрагентаРасширеннаяПодсказка" id="86"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ИсходящиеДокументыГруппаСуммы" id="305">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа суммы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа суммы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ИсходящиеДокументыГруппаСуммыРасширеннаяПодсказка" id="306"/>
+									<ChildItems>
+										<InputField name="ИсходящиеДокументыСумма" id="42">
+											<DataPath>Объект.ИсходящиеДокументы.Сумма</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсходящиеДокументыСуммаКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="ИсходящиеДокументыСуммаРасширеннаяПодсказка" id="44"/>
+										</InputField>
+										<ColumnGroup name="ИсходящиеДокументыГруппаНалоги" id="325">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа налоги</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа налоги</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ИсходящиеДокументыГруппаНалогиРасширеннаяПодсказка" id="326"/>
+											<ChildItems>
+												<InputField name="ИсходящиеДокументыСуммаНДС" id="45">
+													<DataPath>Объект.ИсходящиеДокументы.СуммаНДС</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыСуммаНДСКонтекстноеМеню" id="46"/>
+													<ExtendedTooltip name="ИсходящиеДокументыСуммаНДСРасширеннаяПодсказка" id="47"/>
+												</InputField>
+												<InputField name="ИсходящиеДокументыАкциз" id="87">
+													<DataPath>Объект.ИсходящиеДокументы.Акциз</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыАкцизКонтекстноеМеню" id="88"/>
+													<ExtendedTooltip name="ИсходящиеДокументыАкцизРасширеннаяПодсказка" id="89"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ИсходящиеДокументыГруппаДаты" id="309">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа даты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа даты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ИсходящиеДокументыГруппаДатыРасширеннаяПодсказка" id="310"/>
+									<ChildItems>
+										<InputField name="ИсходящиеДокументыДатаВыставления" id="238">
+											<DataPath>Объект.ИсходящиеДокументы.ДатаВыставления</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсходящиеДокументыДатаВыставленияКонтекстноеМеню" id="239"/>
+											<ExtendedTooltip name="ИсходящиеДокументыДатаВыставленияРасширеннаяПодсказка" id="240"/>
+										</InputField>
+										<InputField name="ИсходящиеДокументыДатаАннулирования" id="60">
+											<DataPath>Объект.ИсходящиеДокументы.ДатаАннулирования</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсходящиеДокументыДатаАннулированияКонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="ИсходящиеДокументыДатаАннулированияРасширеннаяПодсказка" id="62"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ИсходящиеДокументыГруппаЭлектронныйДокумент" id="313">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа электронный документ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа электронный документ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ИсходящиеДокументыГруппаЭлектронныйДокументРасширеннаяПодсказка" id="314"/>
+									<ChildItems>
+										<ColumnGroup name="ИсходящиеДокументыГруппаОтразитьПолучателюИсходящий" id="331">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа отразить получателю исходящий</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа отразить получателю исходящий</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ИсходящиеДокументыГруппаОтразитьПолучателюИсходящийРасширеннаяПодсказка" id="332"/>
+											<ChildItems>
+												<CheckBoxField name="ИсходящиеДокументыОтобразитьПолучателю" id="63">
+													<DataPath>Объект.ИсходящиеДокументы.ОтобразитьПолучателю</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИсходящиеДокументыОтобразитьПолучателюКонтекстноеМеню" id="64"/>
+													<ExtendedTooltip name="ИсходящиеДокументыОтобразитьПолучателюРасширеннаяПодсказка" id="65"/>
+												</CheckBoxField>
+												<CheckBoxField name="ИсходящиеДокументыИсходящий" id="48">
+													<DataPath>Объект.ИсходящиеДокументы.Исходящий</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИсходящиеДокументыИсходящийКонтекстноеМеню" id="49"/>
+													<ExtendedTooltip name="ИсходящиеДокументыИсходящийРасширеннаяПодсказка" id="50"/>
+												</CheckBoxField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ИсходящиеДокументыЭлектронныйДокумент" id="235">
+											<DataPath>Объект.ИсходящиеДокументы.ЭлектронныйДокумент</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсходящиеДокументыЭлектронныйДокументКонтекстноеМеню" id="236"/>
+											<ExtendedTooltip name="ИсходящиеДокументыЭлектронныйДокументРасширеннаяПодсказка" id="237"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ИсходящиеДокументыГруппаКвитанция" id="311">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа квитанция</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа квитанция</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ИсходящиеДокументыГруппаКвитанцияРасширеннаяПодсказка" id="312"/>
+									<ChildItems>
+										<ColumnGroup name="ИсходящиеДокументыГруппаСтатус" id="327">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа статус</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа статус</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ИсходящиеДокументыГруппаСтатусРасширеннаяПодсказка" id="328"/>
+											<ChildItems>
+												<CheckBoxField name="ИсходящиеДокументыПроверка" id="241">
+													<DataPath>Объект.ИсходящиеДокументы.Проверка</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИсходящиеДокументыПроверкаКонтекстноеМеню" id="242"/>
+													<ExtendedTooltip name="ИсходящиеДокументыПроверкаРасширеннаяПодсказка" id="243"/>
+												</CheckBoxField>
+												<InputField name="ИсходящиеДокументыСтатус" id="244">
+													<DataPath>Объект.ИсходящиеДокументы.Статус</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыСтатусКонтекстноеМеню" id="245"/>
+													<ExtendedTooltip name="ИсходящиеДокументыСтатусРасширеннаяПодсказка" id="246"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ИсходящиеДокументыДатаСостояния" id="247">
+											<DataPath>Объект.ИсходящиеДокументы.ДатаСостояния</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсходящиеДокументыДатаСостоянияКонтекстноеМеню" id="248"/>
+											<ExtendedTooltip name="ИсходящиеДокументыДатаСостоянияРасширеннаяПодсказка" id="249"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ИсходящиеДокументыГруппаРеквизитыБланка" id="301">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа реквизиты бланка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа реквизиты бланка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ИсходящиеДокументыГруппаРеквизитыБланкаРасширеннаяПодсказка" id="302"/>
+									<ChildItems>
+										<ColumnGroup name="ИсходящиеДокументыГруппаТипБланка" id="303">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа тип бланка</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа тип бланка</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ИсходящиеДокументыГруппаТипБланкаРасширеннаяПодсказка" id="304"/>
+											<ChildItems>
+												<InputField name="ИсходящиеДокументыТипБСО" id="66">
+													<DataPath>Объект.ИсходящиеДокументы.ТипБСО</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыТипБСОКонтекстноеМеню" id="67"/>
+													<ExtendedTooltip name="ИсходящиеДокументыТипБСОРасширеннаяПодсказка" id="68"/>
+												</InputField>
+												<InputField name="ИсходящиеДокументыКодБланка" id="69">
+													<DataPath>Объект.ИсходящиеДокументы.КодБланка</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыКодБланкаКонтекстноеМеню" id="70"/>
+													<ExtendedTooltip name="ИсходящиеДокументыКодБланкаРасширеннаяПодсказка" id="71"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ИсходящиеДокументыГруппаСерияНомерБланка" id="321">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа серия номер бланка</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Исходящие документы группа серия номер бланка</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ИсходящиеДокументыГруппаСерияНомерБланкаРасширеннаяПодсказка" id="322"/>
+											<ChildItems>
+												<InputField name="ИсходящиеДокументыСерияБланка" id="78">
+													<DataPath>Объект.ИсходящиеДокументы.СерияБланка</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыСерияБланкаКонтекстноеМеню" id="79"/>
+													<ExtendedTooltip name="ИсходящиеДокументыСерияБланкаРасширеннаяПодсказка" id="80"/>
+												</InputField>
+												<InputField name="ИсходящиеДокументыНомерНакладной" id="72">
+													<DataPath>Объект.ИсходящиеДокументы.НомерНакладной</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыНомерНакладнойКонтекстноеМеню" id="73"/>
+													<ExtendedTooltip name="ИсходящиеДокументыНомерНакладнойРасширеннаяПодсказка" id="74"/>
+												</InputField>
+												<InputField name="ИсходящиеДокументыДата" id="75">
+													<DataPath>Объект.ИсходящиеДокументы.Дата</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИсходящиеДокументыДатаКонтекстноеМеню" id="76"/>
+													<ExtendedTooltip name="ИсходящиеДокументыДатаРасширеннаяПодсказка" id="77"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ИсходящиеДокументыГруппаКДокументу" id="317">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа к документу</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходящие документы группа к документу</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ИсходящиеДокументыГруппаКДокументуРасширеннаяПодсказка" id="318"/>
+									<ChildItems>
+										<InputField name="ИсходящиеДокументыКЭСЧФ" id="90">
+											<DataPath>Объект.ИсходящиеДокументы.КЭСЧФ</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>К документу</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсходящиеДокументыКЭСЧФКонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="ИсходящиеДокументыКЭСЧФРасширеннаяПодсказка" id="92"/>
+										</InputField>
+										<InputField name="ИсходящиеДокументыСчетФактураПродавца" id="220">
+											<DataPath>Объект.ИсходящиеДокументы.СчетФактураПродавца</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсходящиеДокументыСчетФактураПродавцаКонтекстноеМеню" id="221"/>
+											<ExtendedTooltip name="ИсходящиеДокументыСчетФактураПродавцаРасширеннаяПодсказка" id="222"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаВходящиеДокументы" id="93">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие документы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаВходящиеДокументыРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<Table name="ВходящиеДокументы" id="95">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ВходящиеДокументы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВходящиеДокументыКонтекстноеМеню" id="96">
+								<ChildItems>
+									<Button name="ВходящиеДокументыКонтекстноеМенюОтметитьДляОбработкиИхсодящие" id="395">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОтметитьДляОбработкиИхсодящие</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ВходящиеДокументыКонтекстноеМенюОтметитьДляОбработкиИхсодящиеРасширеннаяПодсказка" id="396"/>
+									</Button>
+									<Button name="ВходящиеДокументыКонтекстноеМенюСнятьОтметкуОбработкиВходящиеДокументы" id="397">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьОтметкуОбработкиВходящиеДокументы</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ВходящиеДокументыКонтекстноеМенюСнятьОтметкуОбработкиВходящиеДокументыРасширеннаяПодсказка" id="398"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<AutoCommandBar name="ВходящиеДокументыКоманднаяПанель" id="97">
+								<ChildItems>
+									<Popup name="ВходящиеДокументыГруппаДокументы" id="286">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Загрузка документов</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Загрузка документов</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ToolTipRepresentation>None</ToolTipRepresentation>
+										<ExtendedTooltip name="ВходящиеДокументыГруппаДокументыРасширеннаяПодсказка" id="287"/>
+										<ChildItems>
+											<Button name="ВходящиеДокументыПолучитьНомераВходящихДокументов" id="204">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПолучитьНомераВходящихДокументов</CommandName>
+												<Parameter xsi:nil="true"/>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Получить номера</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ВходящиеДокументыПолучитьНомераВходящихДокументовРасширеннаяПодсказка" id="205"/>
+											</Button>
+											<Button name="ВходящиеДокументыПолучитьВходящиеДокументы" id="215">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПолучитьВходящиеДокументы</CommandName>
+												<Parameter xsi:nil="true"/>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Получить документы</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ВходящиеДокументыПолучитьВходящиеДокументыРасширеннаяПодсказка" id="216"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Popup name="ВходящиеДокументыГруппаСтатусы" id="288">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Статусы документов</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Статусы документов</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ToolTipRepresentation>None</ToolTipRepresentation>
+										<ExtendedTooltip name="ВходящиеДокументыГруппаСтатусыРасширеннаяПодсказка" id="289"/>
+										<ChildItems>
+											<Button name="ВходящиеДокументыПолучитьВходящиеДокументыДляОбновленияСтатуса" id="290">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПолучитьВходящиеДокументыДляОбновленияСтатуса</CommandName>
+												<Parameter xsi:nil="true"/>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Заполнить документы</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ВходящиеДокументыПолучитьВходящиеДокументыДляОбновленияСтатусаРасширеннаяПодсказка" id="291"/>
+											</Button>
+											<Button name="ВходящиеДокументыОбновитьСтатусыВходящихДокументов" id="292">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОбновитьСтатусыВходящихДокументов</CommandName>
+												<Parameter xsi:nil="true"/>
+												<ExtendedTooltip name="ВходящиеДокументыОбновитьСтатусыВходящихДокументовРасширеннаяПодсказка" id="293"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Button name="ВходящиеДокументыНайти" id="369">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ВходящиеДокументы.StandardCommand.Find</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ВходящиеДокументыНайтиРасширеннаяПодсказка" id="370"/>
+									</Button>
+									<Button name="ВходящиеДокументыОтменитьПоиск" id="371">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ВходящиеДокументы.StandardCommand.CancelSearch</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ВходящиеДокументыОтменитьПоискРасширеннаяПодсказка" id="372"/>
+									</Button>
+									<Button name="ВходящиеДокументыСортироватьСписокПоВозрастанию" id="373">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ВходящиеДокументы.StandardCommand.SortListAsc</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ВходящиеДокументыСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="374"/>
+									</Button>
+									<Button name="ВходящиеДокументыСортироватьСписокПоУбыванию" id="375">
+										<Type>CommandBarButton</Type>
+										<OnlyInAllActions>true</OnlyInAllActions>
+										<CommandName>Form.Item.ВходящиеДокументы.StandardCommand.SortListDesc</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ВходящиеДокументыСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="376"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ВходящиеДокументыРасширеннаяПодсказка" id="98"/>
+							<SearchStringAddition name="ВходящиеДокументыСтрокаПоиска" id="99">
+								<Source>
+									<lf:elementId>95</lf:elementId>
+									<lf:additionId>0</lf:additionId>
+								</Source>
+								<ContextMenu name="ВходящиеДокументыСтрокаПоискаКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="ВходящиеДокументыСтрокаПоискаРасширеннаяПодсказка" id="101"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВходящиеДокументыСостояниеПросмотра" id="102">
+								<Source>
+									<lf:elementId>95</lf:elementId>
+									<lf:additionId>1</lf:additionId>
+								</Source>
+								<ContextMenu name="ВходящиеДокументыСостояниеПросмотраКонтекстноеМеню" id="103"/>
+								<ExtendedTooltip name="ВходящиеДокументыСостояниеПросмотраРасширеннаяПодсказка" id="104"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВходящиеДокументыУправлениеПоиском" id="105">
+								<Source>
+									<lf:elementId>95</lf:elementId>
+									<lf:additionId>2</lf:additionId>
+								</Source>
+								<ContextMenu name="ВходящиеДокументыУправлениеПоискомКонтекстноеМеню" id="106"/>
+								<ExtendedTooltip name="ВходящиеДокументыУправлениеПоискомРасширеннаяПодсказка" id="107"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnEditEnd">ВходящиеДокументыПриОкончанииРедактирования</Event>
+								<Event name="AfterDeleteRow">ВходящиеДокументыПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ВходящиеДокументыГруппаНомерСтроки" id="388">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа номер строки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа номер строки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ВходящиеДокументыГруппаНомерСтрокиРасширеннаяПодсказка" id="389"/>
+									<ChildItems>
+										<LabelField name="ВходящиеДокументыНомерСтроки" id="108">
+											<DataPath>Объект.ВходящиеДокументы.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящиеДокументыНомерСтрокиКонтекстноеМеню" id="109"/>
+											<ExtendedTooltip name="ВходящиеДокументыНомерСтрокиРасширеннаяПодсказка" id="110"/>
+										</LabelField>
+										<PictureField name="ВходящиеДокументыОбрабатывать" id="390">
+											<DataPath>Объект.ВходящиеДокументы.Обрабатывать</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Фл</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ValuesPicture>
+												<xr:Ref>StdPicture.BusinessProcessStart</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</ValuesPicture>
+											<ContextMenu name="ВходящиеДокументыОбрабатыватьКонтекстноеМеню" id="391"/>
+											<ExtendedTooltip name="ВходящиеДокументыОбрабатыватьРасширеннаяПодсказка" id="392"/>
+										</PictureField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ВходящиеДокументыГруппаДокумент" id="319">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа документ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа документ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ВходящиеДокументыГруппаДокументРасширеннаяПодсказка" id="320"/>
+									<ChildItems>
+										<ColumnGroup name="ВходящиеДокументыГруппаРеквизитыДокумента" id="333">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа реквизиты документа</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа реквизиты документа</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ВходящиеДокументыГруппаРеквизитыДокументаРасширеннаяПодсказка" id="334"/>
+											<ChildItems>
+												<InputField name="ВходящиеДокументыНомерЭСЧФ" id="123">
+													<DataPath>Объект.ВходящиеДокументы.НомерЭСЧФ</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыНомерЭСЧФКонтекстноеМеню" id="124"/>
+													<ExtendedTooltip name="ВходящиеДокументыНомерЭСЧФРасширеннаяПодсказка" id="125"/>
+												</InputField>
+												<InputField name="ВходящиеДокументыДокумент" id="111">
+													<DataPath>Объект.ВходящиеДокументы.Документ</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыДокументКонтекстноеМеню" id="112"/>
+													<ExtendedTooltip name="ВходящиеДокументыДокументРасширеннаяПодсказка" id="113"/>
+												</InputField>
+												<InputField name="ВходящиеДокументыДата" id="147">
+													<DataPath>Объект.ВходящиеДокументы.Дата</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыДатаКонтекстноеМеню" id="148"/>
+													<ExtendedTooltip name="ВходящиеДокументыДатаРасширеннаяПодсказка" id="149"/>
+												</InputField>
+												<CheckBoxField name="ВходящиеДокументыПроведен" id="201">
+													<DataPath>Объект.ВходящиеДокументы.Проведен</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ВходящиеДокументыПроведенКонтекстноеМеню" id="202"/>
+													<ExtendedTooltip name="ВходящиеДокументыПроведенРасширеннаяПодсказка" id="203"/>
+												</CheckBoxField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ВходящиеДокументыГруппаРеквизитыДокумента2" id="335">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа реквизиты документа2</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа реквизиты документа2</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ВходящиеДокументыГруппаРеквизитыДокумента2РасширеннаяПодсказка" id="336"/>
+											<ChildItems>
+												<InputField name="ВходящиеДокументыВидОперации" id="177">
+													<DataPath>Объект.ВходящиеДокументы.ВидОперации</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыВидОперацииКонтекстноеМеню" id="178"/>
+													<ExtendedTooltip name="ВходящиеДокументыВидОперацииРасширеннаяПодсказка" id="179"/>
+												</InputField>
+												<InputField name="ВходящиеДокументыТип" id="126">
+													<DataPath>Объект.ВходящиеДокументы.Тип</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыТипКонтекстноеМеню" id="127"/>
+													<ExtendedTooltip name="ВходящиеДокументыТипРасширеннаяПодсказка" id="128"/>
+												</InputField>
+												<InputField name="ВходящиеДокументыДатаСовершенияОперации" id="129">
+													<DataPath>Объект.ВходящиеДокументы.ДатаСовершенияОперации</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыДатаСовершенияОперацииКонтекстноеМеню" id="130"/>
+													<ExtendedTooltip name="ВходящиеДокументыДатаСовершенияОперацииРасширеннаяПодсказка" id="131"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ВходящиеДокументыГруппаКонтрагент" id="344">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа контрагент</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа контрагент</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ВходящиеДокументыГруппаКонтрагентРасширеннаяПодсказка" id="345"/>
+									<ChildItems>
+										<InputField name="ВходящиеДокументыКонтрагент" id="153">
+											<DataPath>Объект.ВходящиеДокументы.Контрагент</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящиеДокументыКонтрагентКонтекстноеМеню" id="154"/>
+											<ExtendedTooltip name="ВходящиеДокументыКонтрагентРасширеннаяПодсказка" id="155"/>
+										</InputField>
+										<InputField name="ВходящиеДокументыДоговорКонтрагента" id="156">
+											<DataPath>Объект.ВходящиеДокументы.ДоговорКонтрагента</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящиеДокументыДоговорКонтрагентаКонтекстноеМеню" id="157"/>
+											<ExtendedTooltip name="ВходящиеДокументыДоговорКонтрагентаРасширеннаяПодсказка" id="158"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ВходящиеДокументыГруппаСуммы" id="346">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа суммы</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа суммы</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ВходящиеДокументыГруппаСуммыРасширеннаяПодсказка" id="347"/>
+									<ChildItems>
+										<ColumnGroup name="ВходящиеДокументыГруппаСуммыОсновные" id="348">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа суммы основные</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа суммы основные</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ВходящиеДокументыГруппаСуммыОсновныеРасширеннаяПодсказка" id="349"/>
+											<ChildItems>
+												<InputField name="ВходящиеДокументыСумма" id="114">
+													<DataPath>Объект.ВходящиеДокументы.Сумма</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыСуммаКонтекстноеМеню" id="115"/>
+													<ExtendedTooltip name="ВходящиеДокументыСуммаРасширеннаяПодсказка" id="116"/>
+												</InputField>
+												<InputField name="ВходящиеДокументыСуммаСНДС" id="298">
+													<DataPath>Объект.ВходящиеДокументы.СуммаСНДС</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыСуммаСНДСКонтекстноеМеню" id="299"/>
+													<ExtendedTooltip name="ВходящиеДокументыСуммаСНДСРасширеннаяПодсказка" id="300"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ВходящиеДокументыГруппаНалоги" id="350">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа налоги</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа налоги</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ВходящиеДокументыГруппаНалогиРасширеннаяПодсказка" id="351"/>
+											<ChildItems>
+												<InputField name="ВходящиеДокументыАкциз" id="159">
+													<DataPath>Объект.ВходящиеДокументы.Акциз</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыАкцизКонтекстноеМеню" id="160"/>
+													<ExtendedTooltip name="ВходящиеДокументыАкцизРасширеннаяПодсказка" id="161"/>
+												</InputField>
+												<InputField name="ВходящиеДокументыСуммаНДС" id="117">
+													<DataPath>Объект.ВходящиеДокументы.СуммаНДС</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыСуммаНДСКонтекстноеМеню" id="118"/>
+													<ExtendedTooltip name="ВходящиеДокументыСуммаНДСРасширеннаяПодсказка" id="119"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ВходящиеДокументыГруппаДаты" id="352">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа даты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа даты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ВходящиеДокументыГруппаДатыРасширеннаяПодсказка" id="353"/>
+									<ChildItems>
+										<ColumnGroup name="ВходящиеДокументыГруппаДатыВыставленияПодтверждения" id="361">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа даты выставления подтверждения</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа даты выставления подтверждения</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ВходящиеДокументыГруппаДатыВыставленияПодтвержденияРасширеннаяПодсказка" id="362"/>
+											<ChildItems>
+												<InputField name="ВходящиеДокументыДатаВыставления" id="217">
+													<DataPath>Объект.ВходящиеДокументы.ДатаВыставления</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыДатаВыставленияКонтекстноеМеню" id="218"/>
+													<ExtendedTooltip name="ВходящиеДокументыДатаВыставленияРасширеннаяПодсказка" id="219"/>
+												</InputField>
+												<InputField name="ВходящиеДокументыДатаПодтверждения" id="358">
+													<DataPath>Объект.ВходящиеДокументы.ДатаПодтверждения</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыДатаПодтвержденияКонтекстноеМеню" id="359"/>
+													<ExtendedTooltip name="ВходящиеДокументыДатаПодтвержденияРасширеннаяПодсказка" id="360"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ВходящиеДокументыДатаАннулирования" id="132">
+											<DataPath>Объект.ВходящиеДокументы.ДатаАннулирования</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящиеДокументыДатаАннулированияКонтекстноеМеню" id="133"/>
+											<ExtendedTooltip name="ВходящиеДокументыДатаАннулированияРасширеннаяПодсказка" id="134"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ВходящиеДокументыЭлектронныйДокумент" id="174">
+									<DataPath>Объект.ВходящиеДокументы.ЭлектронныйДокумент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВходящиеДокументыЭлектронныйДокументКонтекстноеМеню" id="175"/>
+									<ExtendedTooltip name="ВходящиеДокументыЭлектронныйДокументРасширеннаяПодсказка" id="176"/>
+								</InputField>
+								<ColumnGroup name="ВходящиеДокументыГруппаКвитанция" id="337">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа квитанция</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа квитанция</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ВходящиеДокументыГруппаКвитанцияРасширеннаяПодсказка" id="338"/>
+									<ChildItems>
+										<ColumnGroup name="ВходящиеДокументыГруппаСтатус" id="339">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа статус</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа статус</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ВходящиеДокументыГруппаСтатусРасширеннаяПодсказка" id="340"/>
+											<ChildItems>
+												<CheckBoxField name="ВходящиеДокументыПроверка" id="280">
+													<DataPath>Объект.ВходящиеДокументы.Проверка</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ВходящиеДокументыПроверкаКонтекстноеМеню" id="281"/>
+													<ExtendedTooltip name="ВходящиеДокументыПроверкаРасширеннаяПодсказка" id="282"/>
+												</CheckBoxField>
+												<InputField name="ВходящиеДокументыСтатус" id="283">
+													<DataPath>Объект.ВходящиеДокументы.Статус</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыСтатусКонтекстноеМеню" id="284"/>
+													<ExtendedTooltip name="ВходящиеДокументыСтатусРасширеннаяПодсказка" id="285"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ВходящиеДокументыДатаСостояния" id="277">
+											<DataPath>Объект.ВходящиеДокументы.ДатаСостояния</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящиеДокументыДатаСостоянияКонтекстноеМеню" id="278"/>
+											<ExtendedTooltip name="ВходящиеДокументыДатаСостоянияРасширеннаяПодсказка" id="279"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ВходящиеДокументыГруппаНакладная" id="354">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа накладная</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящие документы группа накладная</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ExtendedTooltip name="ВходящиеДокументыГруппаНакладнаяРасширеннаяПодсказка" id="355"/>
+									<ChildItems>
+										<ColumnGroup name="ВходящиеДокументыГруппаНакладнаяСерияНомер" id="356">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа накладная серия номер</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Входящие документы группа накладная серия номер</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ВходящиеДокументыГруппаНакладнаяСерияНомерРасширеннаяПодсказка" id="357"/>
+											<ChildItems>
+												<InputField name="ВходящиеДокументыНакладнаяНомер" id="186">
+													<DataPath>Объект.ВходящиеДокументы.НакладнаяНомер</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыНакладнаяНомерКонтекстноеМеню" id="187"/>
+													<ExtendedTooltip name="ВходящиеДокументыНакладнаяНомерРасширеннаяПодсказка" id="188"/>
+												</InputField>
+												<InputField name="ВходящиеДокументыНакладнаяСерия" id="183">
+													<DataPath>Объект.ВходящиеДокументы.НакладнаяСерия</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ВходящиеДокументыНакладнаяСерияКонтекстноеМеню" id="184"/>
+													<ExtendedTooltip name="ВходящиеДокументыНакладнаяСерияРасширеннаяПодсказка" id="185"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ВходящиеДокументыНакладнаяДата" id="180">
+											<DataPath>Объект.ВходящиеДокументы.НакладнаяДата</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВходящиеДокументыНакладнаяДатаКонтекстноеМеню" id="181"/>
+											<ExtendedTooltip name="ВходящиеДокументыНакладнаяДатаРасширеннаяПодсказка" id="182"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ВходящиеДокументыКЭСЧФ" id="162">
+									<DataPath>Объект.ВходящиеДокументы.КЭСЧФ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>К документу</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВходящиеДокументыКЭСЧФКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="ВходящиеДокументыКЭСЧФРасширеннаяПодсказка" id="164"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<LabelField name="СтрокаСостояния" id="210">
+			<DataPath>СтрокаСостояния</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>СОСТОЯНИЕ</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>#FF0000</TitleTextColor>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<TitleLocation>Left</TitleLocation>
+			<HorizontalAlign>Left</HorizontalAlign>
+			<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ContextMenu name="СтрокаСостоянияКонтекстноеМеню" id="211"/>
+			<ExtendedTooltip name="СтрокаСостоянияРасширеннаяПодсказка" id="212"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОбменСПорталомИМНС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СтрокаСостояния" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка состояния</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяОперация" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая операция</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПолучитьНомераВходящихДокументов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить номера входящих документов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить номера входящих документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьНомераВходящихДокументов</Action>
+		</Command>
+		<Command name="Авторизация" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПриАвторизацииКоманда</Action>
+		</Command>
+		<Command name="Подключение" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подключение</Action>
+		</Command>
+		<Command name="ЗавершениеАвторизации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить сеанс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершение авторизации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗавершениеАвторизации</Action>
+		</Command>
+		<Command name="ПолучитьВходящиеДокументы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить входящие документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить входящие документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьВходящиеДокументы</Action>
+		</Command>
+		<Command name="ПолучитьИсходящиеДокументыБезСтатуса" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить исходящие документы без статуса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить исходящие документы без статуса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьИсходящиеДокументыБезСтатуса</Action>
+		</Command>
+		<Command name="ОбновитьСтатусыИсходящихДокументов" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить статусы исходящих документов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить статусы исходящих документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьСтатусыИсходящихДокументов</Action>
+		</Command>
+		<Command name="ОткрытьНастройкиПодсистемы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки подсистемы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки подсистемы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьНастройкиПодсистемы</Action>
+		</Command>
+		<Command name="ПолучитьВходящиеДокументыДляОбновленияСтатуса" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить входящие документы для обновления статуса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьВходящиеДокументыДляОбновленияСтатуса</Action>
+		</Command>
+		<Command name="ОбновитьСтатусыВходящихДокументов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить статусы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить статусы входящих документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьСтатусыВходящихДокументов</Action>
+		</Command>
+		<Command name="ВыбратьПериод" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Select</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыбратьПериод</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="АвторизацияИПодключение" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация и подключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авторизация и подключение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АвторизацияИПодключение</Action>
+		</Command>
+		<Command name="ОтметитьДляОбработкиИхсодящие" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометку обработки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить для обработки ихсодящие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтметитьДляОбработкиИхсодящие</Action>
+		</Command>
+		<Command name="СнятьОтметкуОбработкиВходящиеДокументы" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять отметку обработки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять отметку обработки входящие документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьОтметкуОбработкиВходящиеДокументы</Action>
+		</Command>
+		<Command name="УстановитьРежимРаботыНаКлиенте" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На клиенте</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить режим работы на клиенте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьРежимРаботыНаКлиенте</Action>
+		</Command>
+		<Command name="УстановитьРежимРаботыНаСервере" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На сервере</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить режим работы на сервере</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьРежимРаботыНаСервере</Action>
+		</Command>
+	</Commands>
+</Form>

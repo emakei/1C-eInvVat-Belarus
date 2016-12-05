@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Configuration uuid="c3680155-337c-4981-99c2-6f4432e0b1c1" formatVersion="1.0">
+		<InternalInfo>
+			<xr:ContainedObject>
+				<xr:ClassId>9cd510cd-abfc-11d4-9434-004095e12fc7</xr:ClassId>
+				<xr:ObjectId>c707c845-3a8a-47ba-8123-e66b0db0cec3</xr:ObjectId>
+			</xr:ContainedObject>
+			<xr:ContainedObject>
+				<xr:ClassId>9fcd25a0-4822-11d4-9414-008048da11f9</xr:ClassId>
+				<xr:ObjectId>6b23fdfa-ea3e-46e9-bcfb-4119dc110342</xr:ObjectId>
+			</xr:ContainedObject>
+			<xr:ContainedObject>
+				<xr:ClassId>e3687481-0a87-462c-a166-9f34594f9bba</xr:ClassId>
+				<xr:ObjectId>7ab317a0-eec9-4760-b908-2e4a3c58675b</xr:ObjectId>
+			</xr:ContainedObject>
+			<xr:ContainedObject>
+				<xr:ClassId>9de14907-ec23-4a07-96f0-85521cb6b53b</xr:ClassId>
+				<xr:ObjectId>3c1ff5c3-2794-453e-910a-e7c6ef24dfd8</xr:ObjectId>
+			</xr:ContainedObject>
+			<xr:ContainedObject>
+				<xr:ClassId>51f2d5d8-ea4d-4064-8892-82951750031e</xr:ClassId>
+				<xr:ObjectId>faa3030f-0777-41be-821d-34813cff6143</xr:ObjectId>
+			</xr:ContainedObject>
+			<xr:ContainedObject>
+				<xr:ClassId>e68182ea-4237-4383-967f-90c1e3370bc7</xr:ClassId>
+				<xr:ObjectId>26f284ad-91ce-4edb-8a5b-3fb5894ace1f</xr:ObjectId>
+			</xr:ContainedObject>
+		</InternalInfo>
+		<Properties>
+			<Name>ОбменЭСчФпоНДСсИМНСРБ</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обмен э сч фпо НДС с ИМНС РБ</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<NamePrefix/>
+			<DefaultRunMode>OrdinaryApplication</DefaultRunMode>
+			<UsePurposes>
+				<v8:Value xsi:type="app:ApplicationUsePurpose">PersonalComputer</v8:Value>
+			</UsePurposes>
+			<ScriptVariant>Russian</ScriptVariant>
+			<DefaultRoles>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПолныеПрава</xr:Item>
+			</DefaultRoles>
+			<Vendor>Макей Евгений Владимирович</Vendor>
+			<Version>1.0</Version>
+			<UpdateCatalogAddress/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<UseManagedFormInOrdinaryApplication>true</UseManagedFormInOrdinaryApplication>
+			<UseOrdinaryFormInManagedApplication>true</UseOrdinaryFormInManagedApplication>
+			<AdditionalFullTextSearchDictionaries/>
+			<CommonSettingsStorage/>
+			<ReportsUserSettingsStorage/>
+			<ReportsVariantsStorage/>
+			<FormDataSettingsStorage/>
+			<DynamicListsUserSettingsStorage/>
+			<Content/>
+			<DefaultReportForm/>
+			<DefaultReportVariantForm/>
+			<DefaultReportSettingsForm/>
+			<DefaultDynamicListSettingsForm/>
+			<DefaultSearchForm/>
+			<RequiredMobileApplicationPermissions>
+				<v8:pair>
+					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Multimedia</v8:Key>
+					<v8:Value xsi:type="xs:boolean">false</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Location</v8:Key>
+					<v8:Value xsi:type="xs:boolean">false</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Contacts</v8:Key>
+					<v8:Value xsi:type="xs:boolean">false</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Calendars</v8:Key>
+					<v8:Value xsi:type="xs:boolean">false</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">Telephony</v8:Key>
+					<v8:Value xsi:type="xs:boolean">false</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">PushNotification</v8:Key>
+					<v8:Value xsi:type="xs:boolean">false</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="app:RequiredMobileApplicationPermissions">LocalNotification</v8:Key>
+					<v8:Value xsi:type="xs:boolean">false</v8:Value>
+				</v8:pair>
+			</RequiredMobileApplicationPermissions>
+			<DefaultInterface/>
+			<DefaultStyle/>
+			<DefaultLanguage>Language.Русский</DefaultLanguage>
+			<BriefInformation/>
+			<DetailedInformation/>
+			<Copyright>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Макей Евгений Владимирович</v8:content>
+				</v8:item>
+			</Copyright>
+			<VendorInformationAddress/>
+			<ConfigurationInformationAddress/>
+			<DataLockControlMode>Automatic</DataLockControlMode>
+			<ObjectAutonumerationMode>NotAutoFree</ObjectAutonumerationMode>
+			<ModalityUseMode>Use</ModalityUseMode>
+			<SynchronousExtensionAndAddInCallUseMode>Use</SynchronousExtensionAndAddInCallUseMode>
+			<InterfaceCompatibilityMode>Version8_2</InterfaceCompatibilityMode>
+			<CompatibilityMode>Version8_2_16</CompatibilityMode>
+			<DefaultConstantsForm>CommonForm.ФормаНастроекЭСЧФ</DefaultConstantsForm>
+		</Properties>
+		<ChildObjects>
+			<Language>Русский</Language>
+			<Subsystem>ЭСчФпоНДС</Subsystem>
+			<SessionParameter>XSD</SessionParameter>
+			<SessionParameter>WSurl</SessionParameter>
+			<SessionParameter>ПутьКаталогаХраненияВходящихДокументов</SessionParameter>
+			<SessionParameter>СохранениеДокументов</SessionParameter>
+			<SessionParameter>РасположениеВходящихФайлов</SessionParameter>
+			<SessionParameter>РежимРаботыПоУмолчаниюЭСЧФ</SessionParameter>
+			<Role>ИспользованиеЭСЧФ</Role>
+			<Role>ИспользованиеЭСЧФПолный</Role>
+			<Role>ПодписаниеИОбменЭСЧФ</Role>
+			<Role>Пользователь</Role>
+			<Role>ПолныеПрава</Role>
+			<CommonTemplate>ФормаЭСЧФ</CommonTemplate>
+			<CommonTemplate>КвитанцияЭСЧФ</CommonTemplate>
+			<CommonModule>ОбменДанными</CommonModule>
+			<CommonModule>ЭСЧФсервер</CommonModule>
+			<CommonModule>ЭСЧФклиент</CommonModule>
+			<CommonModule>ЭСЧФобщий</CommonModule>
+			<CommonModule>ЭСЧФсерверПовтИсп</CommonModule>
+			<CommonModule>ЭСЧФклиентПовтИсп</CommonModule>
+			<CommonModule>ЭСЧФОбработкаДанныхДокументов</CommonModule>
+			<CommonModule>УправлениеКонтактнойИнформацией</CommonModule>
+			<CommonModule>МодульВалютногоУчета</CommonModule>
+			<CommonModule>УчетНДС</CommonModule>
+			<CommonModule>РаботаСДиалогами</CommonModule>
+			<CommonModule>ОбщегоНазначения</CommonModule>
+			<CommonModule>Глобальный</CommonModule>
+			<Constant>ИмяМодуляКриптографии</Constant>
+			<Constant>АдресПроксиСервераЭСЧФ</Constant>
+			<Constant>ПутьКаталогаХраненияВходящихДокументов</Constant>
+			<Constant>WSurl</Constant>
+			<Constant>ПутьКаталогаXSD</Constant>
+			<Constant>РасположениеВходящихФайлов</Constant>
+			<Constant>ПутьМодуляКриптографии</Constant>
+			<Constant>РежимРаботыПоУмолчаниюЭСЧФ</Constant>
+			<Constant>ТипМодуляКриптографии</Constant>
+			<Constant>СохранениеДокументов</Constant>
+			<Constant>ПортПроксиСервераЭСЧФ</Constant>
+			<Constant>ИмяПользователяПроксиСервераЭСЧФ</Constant>
+			<Constant>ПарольПользователяПроксиСервераЭСЧФ</Constant>
+			<Constant>ТипПроксиСервераЭСЧФ</Constant>
+			<Constant>ИспользоватьПроксиСерверЭСЧФ</Constant>
+			<CommonForm>ФормаЭСЧФ</CommonForm>
+			<CommonForm>ФормаНастроекЭСЧФ</CommonForm>
+			<CommonForm>ФормаЭСЧФобычная</CommonForm>
+			<CommonForm>НастройкаПрограммы</CommonForm>
+			<Catalog>ГруппыПользователей</Catalog>
+			<Catalog>КлассификаторЕдиницИзмерения</Catalog>
+			<Catalog>ДоговорыКонтрагентов</Catalog>
+			<Catalog>Контрагенты</Catalog>
+			<Catalog>НематериальныеАктивы</Catalog>
+			<Catalog>Номенклатура</Catalog>
+			<Catalog>НоменклатурныеГруппы</Catalog>
+			<Catalog>ОбъектыСтроительства</Catalog>
+		

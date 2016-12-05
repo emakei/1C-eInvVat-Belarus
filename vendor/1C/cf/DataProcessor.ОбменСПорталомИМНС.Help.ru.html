@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.18525"></meta></head><body>
+<h5>Обработка предназначена для обмена данными с порталом ИМНС по электронным-счетам фактурам по НДС</h5>
+<h6 style="MARGIN-RIGHT: 0px" dir="ltr">Команды формы:</h6>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><em><strong>Авторизация</strong> </em>- выполнить авторизацию в *хранилище</p>
+<p><em><strong>Подключение</strong></em> - выполнить подключение к веб-сервису ИМНС</p>
+<p><em><strong>Авторизация и подключение</strong></em> - выполнить авторизацию в *хранилище и подключение к веб-сервису ИМНС</p>
+<p><em><strong>Завершить сеанс работы</strong> </em>- выполнить отключение от сервиса и завершить авторизацию</p>
+<p><em><strong>Открыть настройки подсистемы</strong> </em>- открыть окно настроек подсистемы учёта ЭСЧФ</p>
+<p>* если выбрана организация, то ключ подбирается из настроек</p></blockquote>
+<h6 style="MARGIN-RIGHT: 0px" dir="ltr">Реквизиты документа:</h6>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><em><strong>Режим работы</strong> </em>- указывает, где выполнять код компоненты</p>
+<p><em><u><strong>Отбор</strong></u></em></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><strong><em>Организация</em> </strong>- организация для обмена данными</p>
+<p><em><strong>Период</strong></em> - период выборки данных</p>
+<p><em><strong>Только для загрузки</strong></em> - искать только требующие загрузки статуса (нет статуса, ошибка, не найден) исходящие документы</p>
+<p><em><strong>Только выставленные документы</strong></em> - искать только выставленные на портал исходящие документа</p>
+<p><em><strong>Только подтвержденные документы</strong></em> - искать только выставленные (подтвержденные) входящие документы</p></blockquote>
+<p><em><u><strong>Настройка загрузки</strong></u></em></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><em><strong>Загружать товары</strong></em> - загружать шестой раздел входящего документа полсностью</p>
+<p><em><strong>Загружать документы поставки</strong></em> - загружать пятый раздел входящего документа полсностью</p>
+<p><em><strong>Загружать грузоотправителей/грузополучателей</strong></em> - загружать четвертый раздел входящего документа полсностью</p></blockquote>
+<p><em><u><strong>Сохранение документа</strong></u></em></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><strong><em>Сохр. эл. док-ы</em></strong> - какие документы *.xml сохранять при обмене (<strong><em>"не сохр." </em></strong>- не сохранять никакие документы, <strong><em>"только значимые" </em></strong>- сохранять только важные статусы документов (используется при получении статусов), <strong><em>"все"</em></strong>  - сохранять все документы)</p>
+<p><strong><em>Флажёк "перезаписывать имеющиеся" </em></strong>- нужно ли перезаписывать документы, имеющиеся в базе или только новые</p>
+<p><strong><em>Расположение xml</em> </strong>- расположение полученного с портала файла *.xml</p></blockquote>
+<p><em><u><strong>Остальные реквизиты</strong></u></em></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>Соответствуют полям электронного счета-фактуры по НДС и будут использованы для заполнения соответствующих полей электронного документа</p></blockquote></blockquote>
+<h6 style="MARGIN-RIGHT: 0px" dir="ltr">Страница "Исходящие документы":</h6>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em><u>Команды</u> </em></strong></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em>Заполнить документы </em></strong>- получить исходящие документы, соответствующие отбору</p>
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em>Обновить статусы </em></strong>- обновить статусы исходящих документов</p></blockquote>
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em>Колонки таблицы </em></strong>соответствуют полям ЭСЧФ и квитанции</p></blockquote>
+<h6 style="MARGIN-RIGHT: 0px" dir="ltr">Страница "Входящие документы":</h6>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em><u>Подменю "Загрузка документов"</u> </em></strong></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em>Получить номера </em></strong>- получить номера входящих документов с портала с даты, указанной в качестве начальной при отборе периода</p>
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em>Получить документы </em></strong>- получить документы *.xml с потрала и отразить в базе</p></blockquote>
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em><u>Подменю "Статусы документов"</u> </em></strong></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em>Заполнить документы </em></strong>- получить документы из базы согласно отбору</p>
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em>Обновить статусы </em></strong>- обновить статусы входящих документов</p></blockquote>
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em>Колонки таблицы </em></strong>соответствуют полям ЭСЧФ и квитанции</p></blockquote>
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong>Подвал</strong></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><strong><em>Состояние </em></strong>- строка дополнительной информации</p></blockquote></body></html>

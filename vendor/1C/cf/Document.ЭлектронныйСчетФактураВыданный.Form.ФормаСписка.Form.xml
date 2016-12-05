@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПоискПоТекущемуЗначению" id="93">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.FindByCurrentValue</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаПоискПоТекущемуЗначениюРасширеннаяПодсказка" id="94"/>
+			</Button>
+			<Button name="ФормаСохранитьЗначения" id="97">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.SaveValues</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаСохранитьЗначенияРасширеннаяПодсказка" id="98"/>
+			</Button>
+			<Button name="ФормаВосстановитьЗначения" id="99">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.RestoreValues</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаВосстановитьЗначенияРасширеннаяПодсказка" id="100"/>
+			</Button>
+			<Button name="ФормаПровести" id="89">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.Post</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаПровестиРасширеннаяПодсказка" id="90"/>
+			</Button>
+			<Button name="ФормаОтменаПроведения" id="91">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>true</OnlyInAllActions>
+				<CommandName>Form.StandardCommand.UndoPosting</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаОтменаПроведенияРасширеннаяПодсказка" id="92"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаФильтр" id="107">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа фильтр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа фильтр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФильтрРасширеннаяПодсказка" id="108"/>
+			<ChildItems>
+				<Button name="ФормаНастройкаСписка" id="95">
+					<Type>Hyperlink</Type>
+					<OnlyInAllActions>true</OnlyInAllActions>
+					<CommandName>Form.StandardCommand.ListSettings</CommandName>
+					<Parameter xsi:nil="true"/>
+					<ExtendedTooltip name="ФормаНастройкаСпискаРасширеннаяПодсказка" id="96"/>
+				</Button>
+				<LabelField name="Отбор" id="101">
+					<DataPath>Список.Filter</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ОтборКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="ОтборРасширеннаяПодсказка" id="103"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата операции</v8:content>
+				</v8:item>
+			</Title>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="11">
+				<Source>
+					<lf:elementId>1</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Дата" id="14">
+					<DataPath>Список.Date</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<LabelField name="НомерЭСЧФ" id="23">
+					<DataPath>Список.НомерЭСЧФ</DataPath>
+					<ContextMenu name="НомерЭСЧФКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="НомерЭСЧФРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<LabelField name="Организация" id="20">
+					<DataPath>Список.Организация</DataPath>
+					<ContextMenu name="ОрганизацияКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<LabelField name="Склад" id="109">
+					<DataPath>Список.Склад</DataPath>
+					<ContextMenu name="СкладКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="111"/>
+				</LabelField>
+				<LabelField name="ВидОперации" id="77">
+					<DataPath>Список.ВидОперации</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Операция</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВидОперацииКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ВидОперацииРасширеннаяПодсказка" id="79"/>
+				</LabelField>
+				<LabelField name="ДатаСовершенияОперацииЭСЧФ" id="26">
+					<DataPath>Список.ДатаСовершенияОперацииЭСЧФ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата операции</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаСовершенияОперацииЭСЧФКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДатаСовершенияОперацииЭСЧФРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="ТипЭСЧФ" id="29">
+					<DataPath>Список.ТипЭСЧФ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТипЭСЧФКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТипЭСЧФРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<LabelField name="КЭСЧФ" id="32">
+					<DataPath>Список.КЭСЧФ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К счету</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КЭСЧФКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="КЭСЧФРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<LabelField name="ДатаАннулированияЭСЧФ" id="35">
+					<DataPath>Список.ДатаАннулированияЭСЧФ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата аннулирования</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаАннулированияЭСЧФКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ДатаАннулированияЭСЧФРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<LabelField name="ДокументОснование" id="38">
+					<DataPath>Список.ДокументОснование</DataPath>
+					<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<LabelField name="Статус" id="104">
+					<DataPath>Список.Статус</DataPath>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="106"/>
+				</LabelField>
+				<LabelField name="Контрагент" id="41">
+					<DataPath>Список.Контрагент</DataPath>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<LabelField name="ДоговорКонтрагента" id="44">
+					<DataPath>Список.ДоговорКонтрагента</DataPath>
+					<ContextMenu name="ДоговорКонтрагентаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ДоговорКонтрагентаРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+				<LabelField name="ПоставщикСтатус" id="47">
+					<DataPath>Список.ПоставщикСтатус</DataPath>
+					<ContextMenu name="ПоставщикСтатусКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПоставщикСтатусРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<LabelField name="ПолучательСтатус" id="50">
+					<DataPath>Список.ПолучательСтатус</DataPath>
+					<ContextMenu name="ПолучательСтатусКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ПолучательСтатусРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="ПолучательУНП" id="53">
+					<DataPath>Список.ПолучательУНП</DataPath>
+					<ContextMenu name="ПолучательУНПКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ПолучательУНПРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<LabelField name="СчетФактураПродавца" id="80">
+					<DataPath>Список.СчетФактураПродавца</DataPath>
+					<ContextMenu name="СчетФактураПродавцаКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="СчетФактураПродавцаРасширеннаяПодсказка" id="82"/>
+				</LabelField>
+				<LabelField name="СчетФактураКомитента" id="83">
+					<DataPath>Список.СчетФактураКомитента</DataPath>
+					<ContextMenu name="СчетФактураКомитентаКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="СчетФактураКомитентаРасширеннаяПодсказка" id="85"/>
+				</LabelField>
+				<LabelField name="ИтогоСтоимость" id="74">
+					<DataPath>Список.ИтогоСтоимость</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИтогоСтоимостьКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ИтогоСтоимостьРасширеннаяПодсказка" id="76"/>
+				</LabelField>
+				<LabelField name="ИтогоСуммаНДС" id="71">
+					<DataPath>Список.ИтогоСуммаНДС</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>НДС</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИтогоСуммаНДСКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ИтогоСуммаНДСРасширеннаяПодсказка" id="73"/>
+				</LabelField>
+				<LabelField name="ИтогоСуммаАкциза" id="68">
+					<DataPath>Список.ИтогоСуммаАкциза</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма акциза</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИтогоСуммаАкцизаКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ИтогоСуммаАкцизаРасширеннаяПодсказка" id="70"/>
+				</LabelField>
+				<LabelField name="ИтогоСтоимостьСНДС" id="65">
+					<DataPath>Список.ИтогоСтоимостьСНДС</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стоимость с НДС</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИтогоСтоимостьСНДСКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ИтогоСтоимостьСНДСРасширеннаяПодсказка" id="67"/>
+				</LabelField>
+				<LabelField name="Ответственный" id="62">
+					<DataPath>Список.Ответственный</DataPath>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="64"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="86">
+					<DataPath>Список.Комментарий</DataPath>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="88"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументЭлектронныйСчетФактураВыданный.Ссылка,
+	ДокументЭлектронныйСчетФактураВыданный.ПометкаУдаления,
+	ДокументЭлектронныйСчетФактураВыданный.Номер,
+	ДокументЭлектронныйСчетФактураВыданный.Дата,
+	ДокументЭлектронныйСчетФактураВыданный.Проведен,
+	ДокументЭлектронныйСчетФактураВыданный.Организация,
+	ДокументЭлектронныйСчетФактураВыданный.НомерЭСЧФ,
+	ДокументЭлектронныйСчетФактураВыданный.ДатаСовершенияОперацииЭСЧФ,
+	ДокументЭлектронныйСчетФактураВыданный.ТипЭСЧФ,
+	ДокументЭлектронныйСчетФактураВыданный.КЭСЧФ,
+	ДокументЭлектронныйСчетФактураВыданный.ДатаАннулированияЭСЧФ,
+	ДокументЭлектронныйСчетФактураВыданный.ОтобразитьПолучателю,
+	ДокументЭлектронныйСчетФактураВыданный.ДокументОснование,
+	ДокументЭлектронныйСчетФактураВыданный.Контрагент,
+	ДокументЭлектронныйСчетФактураВыданный.ДоговорКонтрагента,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикСтатус,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикВзаимозависимоеЛицо,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикРезидентОффшорнойЗоны,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикСделкаСТоварамиПоПеречню,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикВходитВПереченьКрупныхПлательщиков,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикКодСтраны,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикУНП,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикКодФилиала,
+	ДокументЭлектронныйСчетФактураВыданный.Поставщик,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикЮридическийАдрес,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикНомерСчетаКомитента,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикДатаВыпискиКомитента,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикНомерСчетаПродавца,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикДатаВыпискиПродавца,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикРегистрационныйНомерВыпускаТоваров,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикДатаВыпускаТовара,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикДатаВыдачиРазрешенияНаУбытие,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикНомерЗаявленияОВвозеТоваров,
+	ДокументЭлектронныйСчетФактураВыданный.ПоставщикДатаЗаявленияОВвозеТоваров,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательСтатус,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательВзаимозависимоеЛицо,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательРезидентОффшорнойЗоны,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательСделкаСТоварамиПоПеречню,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательВходитВПереченьКрупныхПлательщиков,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательУНП,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательКодСтраны,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательКодФилиала,
+	ДокументЭлектронныйСчетФактураВыданный.Получатель,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательЮридическийАдрес,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательНомерДекларацииНаТовары,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательНомерЗаявленияОВвозеТоваров,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательДатаЗаявленияОВвозеТоваров,
+	ДокументЭлектронныйСчетФактураВыданный.ПолучательДатаВвозаТоваровЗаявленияОВвозеТоваров,
+	ДокументЭлектронныйСчетФактураВыданный.ДоговорНомер,
+	ДокументЭлектронныйСчетФактураВыданный.ДоговорДата,
+	ДокументЭлектронныйСчетФактураВыданный.ДополнительныеСведения,
+	ДокументЭлектронныйСчетФактураВыданный.Ответственный,
+	ДокументЭлектронныйСчетФактураВыданный.ИтогоСтоимостьСНДС,
+	ДокументЭлектронныйСчетФактураВыданный.ИтогоСуммаАкциза,
+	ДокументЭлектронныйСчетФактураВыданный.ИтогоСуммаНДС,
+	ДокументЭлектронныйСчетФактураВыданный.ИтогоСтоимость,
+	ДокументЭлектронныйСчетФактураВыданный.ОбменТовары,
+	ДокументЭлектронныйСчетФактураВыданный.ОбменГрузоотправителиГрузополучатели,
+	ДокументЭлектронныйСчетФактураВыданный.ОбменДокументыПоставки,
+	ДокументЭлектронныйСчетФактураВыданный.ВидОперации,
+	ДокументЭлектронныйСчетФактураВыданный.СчетФактураПродавца,
+	ДокументЭлектронныйСчетФактураВыданный.СчетФактураКомитента,
+	ДокументЭлектронныйСчетФактураВыданный.Комментарий,
+	ДокументЭлектронныйСчетФактураВыданный.НомерГод,
+	ДокументЭлектронныйСчетФактураВыданный.НомерОбъект,
+	ДокументЭлектронныйСчетФактураВыданный.НомерНомер,
+	ДокументЭлектронныйСчетФактураВыданный.Товары.(
+		Ссылка,
+		НомерСтроки,
+		Товар,
+		КодТНВЭДЕАЭС,
+		КодОКЭД,
+		ЕдиницаИзмерения,
+		Количество,
+		Цена,
+		Стоимость,
+		СуммаАкциза,
+		СтавкаНДС,
+		СуммаНДС,
+		СтоимостьСНДС,
+		ТипСтавкиНДС,
+		ВычетВПолномОбъеме,
+		ОсвобождениеОтНДС,
+		РеализацияЗаПределамиРБ,
+		ВвознойНДС,
+		ПроцентНДС
+	),
+	ДокументЭлектронныйСчетФактураВыданный.Грузоотправители.(
+		Ссылка,
+		НомерСтроки,
+		КодСтраны,
+		УНП,
+		Наименование,
+		АдресОтправки
+	),
+	ДокументЭлектронныйСчетФактураВыданный.Грузополучатели.(
+		Ссылка,
+		НомерСтроки,
+		КодСтраны,
+		УНП,
+		Наименование,
+		АдресДоставки
+	),
+	ДокументЭлектронныйСчетФактураВыданный.ДокументыПодтверждающиеПоставку.(
+		Ссылка,
+		НомерСтроки,
+		ТипБСО,
+		Дата,
+		КодТипаБланка,
+		Серия,
+		Номер
+	),
+	ДокументЭлектронныйСчетФактураВыданный.МоментВремени,
+	Квитанции.Статус,
+	Квитанции.ДатаСостояния,
+	Квитанции.Проверка,
+	Квитанции.ЭлектронныйДокумент,
+	ДокументЭлектронныйСчетФактураВыданный.Склад
+ИЗ
+	Документ.ЭлектронныйСчетФактураВыданный КАК ДокументЭлектронныйСчетФактураВыданный
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Квитанции КАК Квитанции
+		ПО ДокументЭлектронныйСчетФактураВыданный.НомерГод = Квитанции.Год
+			И ДокументЭлектронныйСчетФактураВыданный.НомерОбъект = Квитанции.Объект
+			И ДокументЭлектронныйСчетФактураВыданный.НомерНомер = Квитанции.Номер</QueryText>
+				<MainTable>Document.ЭлектронныйСчетФактураВыданный</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">Ответственный</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

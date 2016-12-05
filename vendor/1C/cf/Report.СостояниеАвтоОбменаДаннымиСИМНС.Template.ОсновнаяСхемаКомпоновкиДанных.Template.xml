@@ -1,0 +1,1008 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Граница</dataPath>
+			<field>Граница</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Граница загрузки номеров (min)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтветственныйВыставления</dataPath>
+			<field>ОтветственныйВыставления</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный выставления</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыставления</dataPath>
+			<field>ДатаВыставления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НетДокумента</dataPath>
+			<field>НетДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресОтправки</dataPath>
+			<field>АдресОтправки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодБланка</dataPath>
+			<field>КодБланка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидОперации</dataPath>
+			<field>ВидОперации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проверка</dataPath>
+			<field>Проверка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВыгрузок</dataPath>
+			<field>КоличествоВыгрузок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество выгрузок (max)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Принят</dataPath>
+			<field>Принят</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КомментарийВыставления</dataPath>
+			<field>КомментарийВыставления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КомментарийСтатуса</dataPath>
+			<field>КомментарийСтатуса</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭлектронныйДокументЗагрузки</dataPath>
+			<field>ЭлектронныйДокументЗагрузки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронный документ загрузки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипБСО</dataPath>
+			<field>ТипБСО</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеУдачнаяОтправка</dataPath>
+			<field>НеУдачнаяОтправка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеСоответствуетПротоколу</dataPath>
+			<field>НеСоответствуетПротоколу</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗагрузитьСтатус</dataPath>
+			<field>ЗагрузитьСтатус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить статус</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НетДанных</dataPath>
+			<field>НетДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПоcледнейПопытки</dataPath>
+			<field>ДатаПоcледнейПопытки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата поcледней попытки (min)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭлектронныйДокументСтатуса</dataPath>
+			<field>ЭлектронныйДокументСтатуса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронный документ статуса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Тип</dataPath>
+			<field>Тип</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтветственныйСтатуса</dataPath>
+			<field>ОтветственныйСтатуса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный статуса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтправительУНП</dataPath>
+			<field>ОтправительУНП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОбновлений</dataPath>
+			<field>КоличествоОбновлений</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество обновлений (max)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ошибки</dataPath>
+			<field>Ошибки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументОснование</dataPath>
+			<field>ДокументОснование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОшибкаФайла</dataPath>
+			<field>ОшибкаФайла</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорНомер</dataPath>
+			<field>ДоговорНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОтраженияСтатуса</dataPath>
+			<field>ДатаОтраженияСтатуса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата отражения статуса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеПринятСервисом</dataPath>
+			<field>НеПринятСервисом</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтветственныйЗагрузки</dataPath>
+			<field>ОтветственныйЗагрузки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный загрузки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСостояния</dataPath>
+			<field>ДатаСостояния</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаАннулирования</dataPath>
+			<field>ДатаАннулирования</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПоставщикСтатус</dataPath>
+			<field>ПоставщикСтатус</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭлектронныйДокументВыставленный</dataPath>
+			<field>ЭлектронныйДокументВыставленный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронный документ выставленный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КЭСЧФ</dataPath>
+			<field>КЭСЧФ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорДата</dataPath>
+			<field>ДоговорДата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерНакладной</dataPath>
+			<field>НомерНакладной</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АдресДоставки</dataPath>
+			<field>АдресДоставки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСовершенияОперации</dataPath>
+			<field>ДатаСовершенияОперации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПолучательСтатус</dataPath>
+			<field>ПолучательСтатус</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияБланка</dataPath>
+			<field>СерияБланка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаНДС</dataPath>
+			<field>СуммаНДС</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статус</dataPath>
+			<field>Статус</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНомеров</dataPath>
+			<field>КоличествоНомеров</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество номеров</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Источник</dataPath>
+			<field>Источник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОшибкиПодписиВыставленный</dataPath>
+			<field>ОшибкиПодписиВыставленный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки подписи выставленный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОшибкиПодписиДокументЗагрузки</dataPath>
+			<field>ОшибкиПодписиДокументЗагрузки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки подписи документ загрузки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОшибкиПодписиСтатуса</dataPath>
+			<field>ОшибкиПодписиСтатуса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки подписи статуса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	NULL КАК КоличествоВыгрузок,
+	NULL КАК КоличествоОбновлений,
+	NULL КАК НеСоответствуетПротоколу,
+	NULL КАК НеУдачнаяОтправка,
+	NULL КАК НеПринятСервисом,
+	NULL КАК НетДокумента,
+	1 КАК ЗагрузитьСтатус,
+	СтатусыДляЗагрузки.Организация КАК Организация,
+	СтатусыДляЗагрузки.Номер КАК Номер,
+	"СДЗ" КАК Источник
+ПОМЕСТИТЬ ДанныеИсходящих
+ИЗ
+	РегистрСведений.СтатусыДляЗагрузки КАК СтатусыДляЗагрузки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НомераДляВыгрузки.КоличествоВыгрузок,
+	НомераДляВыгрузки.КоличествоОбновлений,
+	НомераДляВыгрузки.НеСоответствуетПротоколу,
+	НомераДляВыгрузки.НеУдачнаяОтправка,
+	НомераДляВыгрузки.НеПринятСервисом,
+	НомераДляВыгрузки.НетДокумента,
+	0,
+	НомераДляВыгрузки.Организация,
+	НомераДляВыгрузки.Номер,
+	"НДВ"
+ИЗ
+	РегистрСведений.НомераДляВыгрузки КАК НомераДляВыгрузки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НомераДляЗагрузки.Организация,
+	НомераДляЗагрузки.Номер,
+	НомераДляЗагрузки.ДатаЗагрузки КАК ДатаПоcледнейПопытки,
+	НомераДляЗагрузки.Ошибки,
+	0 КАК ЗагрузитьСтатус,
+	NULL КАК Граница,
+	NULL КАК НеУдачнаяОтправка,
+	NULL КАК НеПринятСервисом,
+	NULL КАК НетДокумента,
+	NULL КАК НетДанных,
+	NULL КАК ОшибкаФайла,
+	"НДЗ" КАК Источник
+ПОМЕСТИТЬ ДанныеВходящих
+ИЗ
+	РегистрСведений.НомераДляЗагрузки КАК НомераДляЗагрузки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СтатусыДляЗагрузкиВходящие.Организация,
+	СтатусыДляЗагрузкиВходящие.Номер,
+	NULL,
+	NULL,
+	1,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	"СДЗВ"
+ИЗ
+	РегистрСведений.СтатусыДляЗагрузкиВходящие КАК СтатусыДляЗагрузкиВходящие
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ГраницыНомеровВходящие.Организация,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	ГраницыНомеровВходящие.Граница,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	"ГНВ"
+ИЗ
+	РегистрСведений.ГраницыНомеровВходящие КАК ГраницыНомеровВходящие
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	НомераДляПодтверждения.Организация,
+	НомераДляПодтверждения.Номер,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	НомераДляПодтверждения.НеУдачнаяОтправка,
+	НомераДляПодтверждения.НеПринятСервисом,
+	НомераДляПодтверждения.НетДокумента,
+	НомераДляПодтверждения.НетДанных,
+	НомераДляПодтверждения.ОшибкаФайла,
+	"НДП"
+ИЗ
+	РегистрСведений.НомераДляПодтверждения КАК НомераДляПодтверждения
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	врДанные.КоличествоВыгрузок,
+	врДанные.КоличествоОбновлений,
+	врДанные.НеСоответствуетПротоколу,
+	врДанные.НеУдачнаяОтправка,
+	врДанные.НеПринятСервисом,
+	врДанные.НетДокумента,
+	Квитанции.Статус,
+	Квитанции.ДатаСостояния,
+	Квитанции.Проверка,
+	Квитанции.ЭлектронныйДокумент КАК ЭлектронныйДокументСтатуса,
+	Квитанции.Комментарий КАК КомментарийСтатуса,
+	Квитанции.Ответственный КАК ОтветственныйСтатуса,
+	Квитанции.ДатаОтражения КАК ДатаОтраженияСтатуса,
+	НомераЭСЧФ.ДатаСовершенияОперации,
+	НомераЭСЧФ.Тип,
+	НомераЭСЧФ.ДатаАннулирования,
+	НомераЭСЧФ.ТипБСО,
+	НомераЭСЧФ.НомерНакладной,
+	НомераЭСЧФ.КодБланка,
+	НомераЭСЧФ.СерияБланка,
+	НомераЭСЧФ.ДокументОснование,
+	НомераЭСЧФ.Дата,
+	НомераЭСЧФ.Сумма,
+	НомераЭСЧФ.СуммаНДС,
+	НомераЭСЧФ.КЭСЧФ,
+	НомераЭСЧФ.ВидОперации,
+	НомераЭСЧФ.Контрагент,
+	НомераЭСЧФ.ДоговорКонтрагента,
+	ВыставленныеДокументы.ДатаВыставления,
+	ВыставленныеДокументы.Документ,
+	ВыставленныеДокументы.ЭлектронныйДокумент КАК ЭлектронныйДокументВыставленный,
+	ВыставленныеДокументы.Принят,
+	ВыставленныеДокументы.Комментарий КАК КомментарийВыставления,
+	ВыставленныеДокументы.Ответственный КАК ОтветственныйВыставления,
+	врДанные.ЗагрузитьСтатус,
+	врДанные.Организация КАК Организация,
+	врДанные.Номер КАК Номер,
+	NULL КАК Ошибки,
+	NULL КАК Граница,
+	NULL КАК НетДанных,
+	NULL КАК ОшибкаФайла,
+	NULL КАК ПоставщикСтатус,
+	NULL КАК ПолучательСтатус,
+	НомераЭСЧФ.ДоговорКонтрагента.НомерДоговора КАК ДоговорНомер,
+	НомераЭСЧФ.ДоговорКонтрагента.ДатаДоговора КАК ДоговорДата,
+	NULL КАК ОтветственныйЗагрузки,
+	NULL КАК ЭлектронныйДокументЗагрузки,
+	НомераЭСЧФ.ДоговорКонтрагента.Организация.ИНН КАК ОтправительУНП,
+	NULL КАК АдресОтправки,
+	NULL КАК АдресДоставки,
+	NULL КАК ДатаПоcледнейПопытки,
+	1 КАК КоличествоНомеров,
+	врДанные.Источник КАК Источник,
+	ВыставленныеДокументы.ЭлектронныйДокумент.КоличествоВерныхПодписей &lt;&gt; ВыставленныеДокументы.ЭлектронныйДокумент.КоличествоПодписей КАК ОшибкиПодписиВыставленный,
+	Квитанции.ЭлектронныйДокумент.КоличествоПодписей &lt;&gt; Квитанции.ЭлектронныйДокумент.КоличествоВерныхПодписей КАК ОшибкиПодписиСтатуса,
+	NULL КАК ОшибкиПодписиДокументЗагрузки
+ИЗ
+	ДанныеИсходящих КАК врДанные
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.НомераЭСЧФ КАК НомераЭСЧФ
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Квитанции КАК Квитанции
+			ПО НомераЭСЧФ.Год = Квитанции.Год
+				И НомераЭСЧФ.Объект = Квитанции.Объект
+				И НомераЭСЧФ.Номер = Квитанции.Номер
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ВыставленныеДокументы КАК ВыставленныеДокументы
+			ПО НомераЭСЧФ.Год = ВыставленныеДокументы.Год
+				И НомераЭСЧФ.Объект = ВыставленныеДокументы.Объект
+				И НомераЭСЧФ.Номер = ВыставленныеДокументы.Номер
+		ПО врДанные.Номер = НомераЭСЧФ.НомерЭСЧФ
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	NULL,
+	NULL,
+	NULL,
+	ДанныеВходящих.НеУдачнаяОтправка,
+	ДанныеВходящих.НеПринятСервисом,
+	ДанныеВходящих.НетДокумента,
+	КвитанцииВходящих.Статус,
+	КвитанцииВходящих.ДатаСостояния,
+	КвитанцииВходящих.Проверка,
+	КвитанцииВходящих.ЭлектронныйДокумент,
+	КвитанцииВходящих.Комментарий,
+	КвитанцииВходящих.Ответственный,
+	КвитанцииВходящих.ДатаОтражения,
+	ЭлектронныйСчетФактураПолученный.ДатаСовершенияОперацииЭСЧФ,
+	ЭлектронныйСчетФактураПолученный.ТипЭСЧФ,
+	ЭлектронныйСчетФактураПолученный.ДатаАннулированияЭСЧФ,
+	NULL,
+	ЭлектронныйСчетФактураПолученный.НакладнаяНомер,
+	NULL,
+	ЭлектронныйСчетФактураПолученный.НакладнаяСерия,
+	ЭлектронныйСчетФактураПолученный.Ссылка,
+	ЭлектронныйСчетФактураПолученный.НакладнаяДата,
+	ЭлектронныйСчетФактураПолученный.ИтогоСтоимостьСНДС,
+	ЭлектронныйСчетФактураПолученный.ИтогоСуммаНДС,
+	ЭлектронныйСчетФактураПолученный.КЭСЧФ,
+	ЭлектронныйСчетФактураПолученный.ВидОперации,
+	ЭлектронныйСчетФактураПолученный.Контрагент,
+	ЭлектронныйСчетФактураПолученный.ДоговорКонтрагента,
+	ВыставленныеДокументыВходящие.ДатаВыставления,
+	ВыставленныеДокументыВходящие.Документ,
+	ВыставленныеДокументыВходящие.ЭлектронныйДокумент,
+	ВыставленныеДокументыВходящие.Принят,
+	ВыставленныеДокументыВходящие.Комментарий,
+	ВыставленныеДокументыВходящие.Ответственный,
+	ДанныеВходящих.ЗагрузитьСтатус,
+	ДанныеВходящих.Организация,
+	ДанныеВходящих.Номер,
+	ДанныеВходящих.Ошибки,
+	ДанныеВходящих.Граница,
+	ДанныеВходящих.НетДанных,
+	ДанныеВходящих.ОшибкаФайла,
+	ЭлектронныйСчетФактураПолученный.ПоставщикСтатус,
+	ЭлектронныйСчетФактураПолученный.ПолучательСтатус,
+	ЭлектронныйСчетФактураПолученный.ДоговорНомер,
+	ЭлектронныйСчетФактураПолученный.ДоговорДата,
+	ЭлектронныйСчетФактураПолученный.Ответственный,
+	ЭлектронныйСчетФактураПолученный.ЭлектронныйДокумент,
+	ЭлектронныйСчетФактураПолученный.ОтправительУНП,
+	ЭлектронныйСчетФактураПолученный.АдресОтправки,
+	ЭлектронныйСчетФактураПолученный.АдресДоставки,
+	ДанныеВходящих.ДатаПоcледнейПопытки,
+	1,
+	ДанныеВходящих.Источник,
+	ВыставленныеДокументыВходящие.ЭлектронныйДокумент.КоличествоПодписей &lt;&gt; ВыставленныеДокументыВходящие.ЭлектронныйДокумент.КоличествоВерныхПодписей,
+	КвитанцииВходящих.ЭлектронныйДокумент.КоличествоПодписей &lt;&gt; КвитанцииВходящих.ЭлектронныйДокумент.КоличествоВерныхПодписей,
+	ЭлектронныйСчетФактураПолученный.ЭлектронныйДокумент.КоличествоПодписей &lt;&gt; ЭлектронныйСчетФактураПолученный.ЭлектронныйДокумент.КоличествоВерныхПодписей
+ИЗ
+	ДанныеВходящих КАК ДанныеВходящих
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЭлектронныйСчетФактураПолученный КАК ЭлектронныйСчетФактураПолученный
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КвитанцииВходящих КАК КвитанцииВходящих
+			ПО ЭлектронныйСчетФактураПолученный.НомерГод = КвитанцииВходящих.Год
+				И ЭлектронныйСчетФактураПолученный.НомерОбъект = КвитанцииВходящих.Объект
+				И ЭлектронныйСчетФактураПолученный.НомерНомер = КвитанцииВходящих.Номер
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ВыставленныеДокументыВходящие КАК ВыставленныеДокументыВходящие
+			ПО ЭлектронныйСчетФактураПолученный.НомерГод = ВыставленныеДокументыВходящие.Год
+				И ЭлектронныйСчетФактураПолученный.НомерОбъект = ВыставленныеДокументыВходящие.Объект
+				И ЭлектронныйСчетФактураПолученный.НомерНомер = ВыставленныеДокументыВходящие.Номер
+		ПО ДанныеВходящих.Организация = ЭлектронныйСчетФактураПолученный.Организация
+			И ДанныеВходящих.Номер = ЭлектронныйСчетФактураПолученный.Номер</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Граница</dataPath>
+		<expression>Минимум(Граница)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоВыгрузок</dataPath>
+		<expression>Максимум(КоличествоВыгрузок)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОбновлений</dataPath>
+		<expression>Максимум(КоличествоОбновлений)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НеПринятСервисом</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА НеПринятСервисом ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НеСоответствуетПротоколу</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА НеСоответствуетПротоколу ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НетДанных</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА НетДанных ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НетДокумента</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА НетДокумента ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НеУдачнаяОтправка</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА НеУдачнаяОтправка ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОшибкаФайла</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА ОшибкаФайла ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Ошибки</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА Ошибки ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Принят</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА Принят ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Проверка</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА Проверка ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаНДС</dataPath>
+		<expression>Сумма(СуммаНДС)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДатаПоcледнейПопытки</dataPath>
+		<expression>Минимум(ДатаПоcледнейПопытки)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗагрузитьСтатус</dataPath>
+		<expression>Сумма(ЗагрузитьСтатус)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоНомеров</dataPath>
+		<expression>Сумма(КоличествоНомеров)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КомментарийВыставления</dataPath>
+		<expression>Массив(РАЗЛИЧНЫЕ КомментарийВыставления)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КомментарийСтатуса</dataPath>
+		<expression>Массив(РАЗЛИЧНЫЕ КомментарийСтатуса)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОшибкиПодписиВыставленный</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА ОшибкиПодписиВыставленный ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОшибкиПодписиДокументЗагрузки</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА ОшибкиПодписиДокументЗагрузки ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОшибкиПодписиСтатуса</dataPath>
+		<expression>Сумма(ВЫБОР КОГДА ОшибкиПодписиСтатуса ТОГДА 1 ИНАЧЕ 0 КОНЕЦ)</expression>
+	</totalField>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">КомментарийВыставления</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">КомментарийВыставления</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>КомментарийВыставления</dcsat:name>
+			<dcsat:expression>КомментарийВыставления</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">КомментарийСтатуса</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">КомментарийСтатуса</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>КомментарийСтатуса</dcsat:name>
+			<dcsat:expression>КомментарийСтатуса</dcsat:expression>
+		</parameter>
+	</template>
+	<fieldTemplate>
+		<field>КомментарийВыставления</field>
+		<template>Макет1</template>
+	</fieldTemplate>
+	<fieldTemplate>
+		<field>КомментарийСтатуса</field>
+		<template>Макет2</template>
+	</fieldTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Организация</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Граница</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоНомеров</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗагрузитьСтатус</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаПоcледнейПопытки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НеПринятСервисом</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НеСоответствуетПротоколу</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НеУдачнаяОтправка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НетДанных</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НетДокумента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОшибкаФайла</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Ошибки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОшибкиПодписиВыставленный</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОшибкиПодписиДокументЗагрузки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОшибкиПодписиСтатуса</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Принят</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Проверка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоВыгрузок</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоОбновлений</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КомментарийВыставления</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КомментарийСтатуса</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Сумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаНДС</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидОперации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ВидОперации</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Граница</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоНомеров</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗагрузитьСтатус</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ДатаПоcледнейПопытки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НеПринятСервисом</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НеСоответствуетПротоколу</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НеУдачнаяОтправка</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НетДанных</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>НетДокумента</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОшибкаФайла</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Ошибки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОшибкиПодписиВыставленный</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОшибкиПодписиДокументЗагрузки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ОшибкиПодписиСтатуса</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Принят</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Проверка</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоВыгрузок</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КоличествоОбновлений</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КомментарийСтатуса</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КомментарийВыставления</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Сумма</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СуммаНДС</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Источник</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Номер</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Тип</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КЭСЧФ</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ОтправительУНП</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Контрагент</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПолучательСтатус</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ПоставщикСтатус</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДатаСовершенияОперации</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДатаАннулирования</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДатаВыставления</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Статус</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДатаОтраженияСтатуса</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДатаСостояния</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДоговорКонтрагента</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДоговорДата</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДоговорНомер</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>АдресДоставки</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>АдресОтправки</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Документ</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДокументОснование</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ТипБСО</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КодБланка</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Дата</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>СерияБланка</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>НомерНакладной</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
