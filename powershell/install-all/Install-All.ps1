@@ -14,7 +14,7 @@ if( $inslall ) {
 
     # установка плагина IE
     Write-Host
-    Write-Host "Установка плагина IE" -ForegroundColor Yellow
+    Write-Host "Установка плагина IE"
 
     start $dir\AvCMXWebP-1.1.5r1-setup.exe -Wait
 
@@ -117,7 +117,7 @@ if( $importRoot ) {
         Remove-Item "$dir\all_cert\ruc.crl" -Force | Out-Null
         
         Write-Host
-        Write-Host "Загрузка сертификатов из интернета" -ForegroundColor Yellow
+        Write-Host "Загрузка сертификатов из интернета"
 
         $wc = new-object System.Net.WebClient
         $wc.DownloadFile( "http://www.portal.nalog.gov.by/ca/mns-ca.crl", "$dir\all_cert\mns-ca.crl" )
@@ -151,7 +151,7 @@ if( $ieSettings ) {
         New-ItemProperty "$domains\$domain" -Name * -Value 2 -Type DWORD -Force -Verbose
 
     } else {
-        Write-Host "Не найден каталог реестра 'ZoneMap\Domains'" -ForegroundColor Yellow
+        Write-Warning "Не найден каталог реестра 'ZoneMap\Domains'"
     }
 
     # включение ActiveX
@@ -175,7 +175,7 @@ if( $ieSettings ) {
         New-ItemProperty $trusted -Name 270C -Value 0 -Type DWORD -Force -Verbose
 
     } else {
-        Write-Host "Не найден каталог реестра 'Zones\2'" -ForegroundColor Yellow
+        Write-Warning "Не найден каталог реестра 'Zones\2'"
     }
 
 }
