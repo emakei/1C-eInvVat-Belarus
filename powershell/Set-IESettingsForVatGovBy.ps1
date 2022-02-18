@@ -13,7 +13,7 @@ if( Test-Path $domains ) {
     New-ItemProperty "$domains\$domain" -Name * -Value 2 -Type DWORD -Force -Verbose
 
 } else {
-    Write-Host "Не найден каталог реестра 'ZoneMap\Domains'" -ForegroundColor Yellow
+    Write-Warning "Не найден каталог реестра 'ZoneMap\Domains'"
 }
 
 # включение ActiveX
@@ -37,5 +37,5 @@ if( Test-Path $trusted ) {
     New-ItemProperty $trusted -Name 270C -Value 0 -Type DWORD -Force -Verbose
 
 } else {
-    Write-Host "Не найден каталог реестра 'Zones\2'" -ForegroundColor Yellow
+    Write-Warning "Не найден каталог реестра 'Zones\2'"
 }
